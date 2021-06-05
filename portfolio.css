@@ -21,18 +21,18 @@ h6 {
 }
 
 .homepage h1,
-.aboutPage h1 {
+.content-container h1 {
   font-size: 96px;
   line-height: 1.5;
 }
 
 .homepage h2,
-.aboutPage h2 {
+.content-container h2 {
   font-size: 64px;
 }
 
 .homepage p,
-.aboutPage .aboutMe p {
+.content-container p {
   font-weight: normal;
   font-size: 16px;
   line-height: 30px;
@@ -45,7 +45,7 @@ h6 {
 }
 
 .homepage .hero p,
-.aboutPage h3 {
+.content-container h3 {
   color: #272142;
   font-size: 36px;
   font-weight: bold;
@@ -53,7 +53,7 @@ h6 {
 }
 
 .homepage .hero h2,
-.aboutPage h2 {
+.content-container h2 {
   color: #272142;
   font-family: var(--defualt-font-family);
   font-size: 24px;
@@ -71,7 +71,7 @@ h6 {
 }
 
 .homepage .project-btn,
-.aboutPage .project-btn {
+.content-container .project-btn {
   border: 1px solid var(--branding-color);
   border-radius: 4px;
   color: var(--branding-color);
@@ -81,7 +81,7 @@ h6 {
 }
 
 .homepage .project-btn:hover,
-.aboutPage .project-btn:hover {
+.content-container .project-btn:hover {
   background-color: var(--branding-color);
   border: 1px solid white;
   color: white;
@@ -91,21 +91,25 @@ h6 {
   padding: 120px 0px 0px 60px;
 }
 
-.aboutPage .hero {
+.content-container .content {
   background-color: var(--secondary-color);
   padding: 80px 160px;
 }
-.aboutPage h3 {
+.content-container h3 {
   margin: 20px;
 }
 
-.aboutPage .projects {
+.content-container .projects {
   margin: 10px;
 }
 
+.content-container .work {
+  margin-top: 30px;
+  text-align: center;
+}
 @media (max-width: 786px) {
   .homepage h1,
-  .aboutPage h1 {
+  .content-container h1 {
     font-size: 44px;
     line-height: 1;
   }
@@ -121,23 +125,22 @@ h6 {
     text-align: center;
   }
 
-  .aboutPage .hero {
+  .content-container .content {
     padding: 30px 20px;
   }
 
-  .aboutPage h3 {
+  .content-container h3 {
     margin: 20px 0;
     text-align: center;
     font-size: 30px;
     line-height: 32px;
   }
 
-  .aboutPage .aboutMe p,
-  .aboutPage .projects p {
+  .content-container p {
     text-align: center;
   }
 
-  .aboutPage .project-btn {
+  .content-container .project-btn {
     margin: 0 auto;
     display: flex;
     justify-content: center;
