@@ -107,6 +107,24 @@ h6 {
   margin-top: 30px;
   text-align: center;
 }
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--branding-color);
+  text-transform: uppercase;
+  padding: 0 3px;
+}
+
+.contact a:hover {
+  background-color: var(--branding-color);
+  color: var(--secondary-color);
+  font-family: var(--defualt-font-family);
+}
+
 @media (max-width: 786px) {
   .homepage h1,
   .content-container h1 {
