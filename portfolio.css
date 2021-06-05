@@ -20,35 +20,40 @@ h6 {
   font-weight: bold;
 }
 
-h1 {
+.homepage h1,
+.aboutPage h1 {
   font-size: 96px;
   line-height: 1.5;
 }
 
-h2 {
+.homepage h2,
+.aboutPage h2 {
   font-size: 64px;
 }
 
-p {
+.homepage p,
+.aboutPage .aboutMe p {
   font-weight: normal;
   font-size: 16px;
   line-height: 30px;
 }
 
-.hero {
+.homepage .hero {
   background-color: var(--secondary-color);
   text-align: center;
   padding: 160px 20px;
 }
 
-.hero p {
+.homepage .hero p,
+.aboutPage h3 {
   color: #272142;
   font-size: 36px;
   font-weight: bold;
   line-height: 36px;
 }
 
-.hero h2 {
+.homepage .hero h2,
+.aboutPage h2 {
   color: #272142;
   font-family: var(--defualt-font-family);
   font-size: 24px;
@@ -56,7 +61,7 @@ p {
   line-height: 1.5;
 }
 
-.btn-branding {
+.homepage .btn-branding {
   background: var(--branding-color);
   border-radius: 4px;
   color: white;
@@ -65,7 +70,8 @@ p {
   padding: 18px 30px;
 }
 
-.project-btn {
+.homepage .project-btn,
+.aboutPage .project-btn {
   border: 1px solid var(--branding-color);
   border-radius: 4px;
   color: var(--branding-color);
@@ -74,24 +80,66 @@ p {
   padding: 18px 30px;
 }
 
-.project-description {
+.homepage .project-btn:hover,
+.aboutPage .project-btn:hover {
+  background-color: var(--branding-color);
+  border: 1px solid white;
+  color: white;
+}
+
+.homepage .project-description {
   padding: 120px 0px 0px 60px;
 }
 
-@media (max-width: 900px) {
-  h1 {
+.aboutPage .hero {
+  background-color: var(--secondary-color);
+  padding: 80px 160px;
+}
+.aboutPage h3 {
+  margin: 20px;
+}
+
+.aboutPage .projects {
+  margin: 10px;
+}
+
+@media (max-width: 786px) {
+  .homepage h1,
+  .aboutPage h1 {
     font-size: 44px;
     line-height: 1;
   }
-  h2 {
+  .homepage h2 {
     font-size: 44px;
   }
 
-  .hero {
+  .homepage .hero {
     padding: 80px 20px;
   }
-  .project-description {
+  .homepage .project-description {
     padding: 0;
     text-align: center;
+  }
+
+  .aboutPage .hero {
+    padding: 30px 20px;
+  }
+
+  .aboutPage h3 {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  .aboutPage .aboutMe p,
+  .aboutPage .projects p {
+    text-align: center;
+  }
+
+  .aboutPage .project-btn {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 }
