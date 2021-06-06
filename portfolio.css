@@ -9,6 +9,49 @@ body {
   font-family: var(--defualt-font-family);
 }
 
+nav {
+  padding: 5px;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0 75px;
+}
+
+nav li {
+  list-style: none;
+  display: inline;
+}
+
+nav a {
+  color: #272142;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav .pages {
+  font-size: 16px;
+  line-height: 62px;
+}
+
+nav a:hover {
+  color: var(--branding-color);
+}
+
+nav .logo {
+  font-family: var(--heading-font-family);
+  font-size: 40px;
+}
+
+nav .smallLogo {
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+}
+
+nav .active {
+  text-decoration: 3px var(--branding-color) underline;
+}
+
 h1,
 h2,
 h3,
@@ -162,5 +205,14 @@ h6 {
     margin: 0 auto;
     display: flex;
     justify-content: center;
+  }
+  nav ul {
+    padding: 0;
+    margin: 0 10px;
+  }
+
+  nav .pages {
+    font-size: 12px;
+    line-height: 44px;
   }
 }
