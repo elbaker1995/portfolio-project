@@ -34,7 +34,8 @@ nav .pages {
   line-height: 62px;
 }
 
-nav a:hover {
+nav a:hover,
+footer a:hover {
   color: var(--branding-color);
 }
 
@@ -104,7 +105,8 @@ h6 {
   line-height: 1.5;
 }
 
-.homepage .btn-branding {
+.homepage .btn-branding,
+footer .contactButton {
   background: var(--branding-color);
   border-radius: 4px;
   color: white;
@@ -167,8 +169,36 @@ h6 {
   color: var(--secondary-color);
   font-family: var(--defualt-font-family);
 }
+footer {
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+}
 
-@media (max-width: 786px) {
+footer .contactMeBox {
+  background-color: var(--secondary-color);
+  padding: 30px 120px;
+}
+
+footer .email {
+  line-height: 40px;
+}
+
+footer a {
+  color: #272142;
+  text-decoration: none;
+}
+
+footer .icon {
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  margin: 20px;
+  padding: 10px 14px;
+  font-size: 24px;
+  line-height: 45px;
+}
+
+@media (max-width: 768px) {
   .homepage h1,
   .content-container h1 {
     font-size: 44px;
