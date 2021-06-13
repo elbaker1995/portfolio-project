@@ -34,61 +34,182 @@
   </head>
 </html>
 <body>
-    <div class="content-container container">
-    <div class="content row">
-    <div class="col-lg-6">
-  <h1>Hi I am Eleanor Baker</h1>
-  <h2>Frontend Developer, based in London</h2>
+  <nav>
+    <div class="container">
+      <ul class="d-flex justify-content-between">
+        <li class="pages">
+          <a href="./#" title="Homepage"> Home</a>
+        </li>
+        <li class="pages">
+          <a href="./about.html" class="active" title="About Eleanor"> About</a>
+        </li>
+        <li class="logo d-none d-md-block">
+          <a href="./#" title="Homepage">Eleanor Baker</a>
+        </li>
+        <li class="smallLogo d-block d-md-none">
+          <a href="./#" title="Homepage">E B</a>
+        </li>
+        <li class="pages">
+          <a href="./work.html" title="Eleanor's work"> Projects</a>
+        </li>
+        <li class="pages">
+          <a href="./contact.html" title="Contact Eleanor"> Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="pageContainer container">
+    <div class="headingContent row">
+      <div class="col-lg-6">
+        <h1>Hi, I am Eleanor Baker</h1>
+        <div class="col d-block d-md-none smallImagecontainer">
+          <img
+            src="./images/EleanorBakerSmall.jpg"
+            alt="Eleanor Baker Image"
+            class="img-fluid smallImage"
+          />
+        </div>
+        <h2>A Frontend Developer based in London.</h2>
+      </div>
+      <div class="col-lg-6 d-none d-md-block">
+        <img
+          src="./images/EleanorBaker.jpg"
+          alt="Eleanor Baker Image"
+          class="img-fluid ImageMe"
+        />
+      </div>
+    </div>
+    <br class="d-none d-md-block" />
+    <div class="myBackground">
+      <h3>My Background</h3>
+      <p class="text-muted">
+        Since the age of nineteen, I have been working in the fashion industry,
+        starting with studying fashion design at the London College of Fashion.
+        I went on to work in many different departments in retail, such as
+        Buying and Shoot Production. It wasn’t until the pandemic hit last year
+        that I started to think about developing my skills in another area. I
+        have had always been interested in coding and this seemed like a perfect
+        opportunity to start. I began researching coding boot camps and found
+        that SheCodes was the best fit for my learning style and would fit in
+        around my current job.
+      </p>
+    </div>
+    <div>
+      <h3>My Coding Journey</h3>
+      <p class="text-muted">
+        I always thought if I wanted to change my career, I would have to go
+        back to university, so finding out that most people in the tech industry
+        did not go to university to study tech made me realise that I did not
+        need to either. As soon as I started learning to code, I knew this was
+        the correct decision for me because I enjoyed every second of it. Even
+        when I got stuck in areas, I loved the challenge of trying to solve the
+        problem and the achievement I felt when I worked something out on my own
+        from outside the course. To have started this course not knowing
+        anything to be at the level I am now is an incredible achievement. There
+        is now no doubt in my mind that this the career I should be pursuing.
+      </p>
+    </div>
+    <br />
+    <h3>See my projects so far</h3>
+    <div class="projects row m-lg-5">
+      <div class="col-lg">
+        <a href="https://zealous-johnson-734ee0.netlify.app/" target="_blank">
+          <img
+            src="./images/dictionary project.png"
+            alt="Dictionary Project Image"
+            class="img-fluid Image"
+        /></a>
+        <p class="text-muted d-flex justify-content-around projectIcons">
+          <i class="fab fa-react"></i>
+          <i class="fab fa-js-square"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-html5"></i>
+        </p>
+        <div class="d-flex justify-content-around">
+          <a href="./work.html" class="btn learnMore">Learn More</a>
+          <a
+            href="https://zealous-johnson-734ee0.netlify.app/"
+            class="btn projectButton"
+            target="_blank"
+            >Go to Project</a
+          >
+        </div>
+      </div>
+      <div class="col-lg mx-lg-5">
+        <a href="https://objective-haibt-b80dac.netlify.app/" target="_blank">
+          <img
+            src="./images/weather project.png"
+            alt="Weather Project Image"
+            class="img-fluid Image"
+        /></a>
+        <p class="text-muted d-flex justify-content-around projectIcons">
+          <i class="fab fa-react"></i>
+          <i class="fab fa-js-square"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-html5"></i>
+        </p>
+        <div class="d-flex justify-content-around">
+          <a href="./work.html" class="btn learnMore">Learn More</a>
+          <a
+            href="https://objective-haibt-b80dac.netlify.app/"
+            class="btn projectButton"
+            target="_blank"
+            >Go to Project</a
+          >
+        </div>
+      </div>
+    </div>
+    <br class="d-none d-md-block" />
+    <div class="hobby">
+      <h3>My Journey Around the World</h3>
+      <div class="col-lg mx-lg-5">
+        <img
+          src="./images/map.png"
+          alt="Map of Countries Travelled"
+          class="img-fluid"
+        />
+      </div>
+      <p class="text-muted">
+        Travelling is one of my biggest passions, not only to see the
+        breathtaking views across the world but also travelling allows me to
+        experience other cultures to learn from them and grow as a person. One
+        of my life-long goals is to visit every country to learn all their
+        different ways of life and traditions. From my travels, I've learnt that
+        all backgrounds are unique and that not everyone has the same sense of
+        freedom that I have been fortunate to grow up with, which has given me
+        the ability to be more understanding and accepting of everybody.
+      </p>
+    </div>
   </div>
-  <div class="col-lg-6">
-  <img src="./images/EleanorBaker.jpeg" alt="Eleanor Baker Image" class="img-fluid"/>
-  </div>
-</div>
-  <br class="d-none d-md-block"/>
-  <div class="aboutMe">
-  <h3>Where I started</h3>
-  
-  <p class="text-muted">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Cursus eget nunc
-    scelerisque viverra mauris in aliquam sem fringilla. Enim nec dui nunc
-    mattis enim ut tellus. Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla. Enim
-    nec dui nunc mattis enim ut tellus.
-  </p>
-  <a href="#" class="btn project-btn" target="_blank">Learn More</a>
-  </div>
-  <br />
 
-  <h3>See my projects so far</h3>
-<div class="projects row m-lg-5">
-        <div class="col-lg">
-  <img src="./images/dictionary project.png" alt="Dictionary Project Image" class="img-fluid"/>
-<p class="my-3  text-muted">
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in Bookmarksgrove right at the coast of the Semantics,
-                a large language ocean. A small river named Duden flows by
-              </p> 
-</div>
-   <div class="col-lg mx-lg-5">
-  <img src="./images/dictionary project.png" alt="Dictionary Project Image" class="img-fluid"/>
-<p class="my-3  text-muted">
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in Bookmarksgrove right at the coast of the Semantics,
-                a large language ocean. A small river named Duden flows by
-              </p> 
-</div>
-<div class="col-lg">
-  <img src="./images/dictionary project.png" alt="Dictionary Project Image" class="img-fluid"/>
-<p class="my-3 text-muted">
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in Bookmarksgrove right at the coast of the Semantics,
-                a large language ocean. A small river named Duden flows by
-              </p> 
-</div>
-</div>
+  <footer>
+    <div class="contactMeBox d-flex justify-content-between d-none d-md-flex">
+      <div>
+        <h3>Work Enquiry</h3>
+        <p class="text-muted mb-0">Lets work together</p>
+      </div>
+      <a href="./contact.html" class="btn contactButton">Contact Me</a>
+    </div>
+    <p class="text-muted mt-3">
+      Coded by Eleanor Baker
+      <br />
+<div class="m-2">
+      <a href="mailto:elbaker1995@gmail.com" class="icon"
+        ><i class="far fa-envelope"></i
+      ></a>
+      <a href="https://github.com/elbaker1995" target="blank" class="icon"
+        ><i class="fab fa-github"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/eleanorbaker5595/"
+        target="blank"
+        class="icon"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+      <a href="https://www.instagram.com/elb_5/" target="blank" class="icon"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      </div>
+    </p>
+  </footer>
 </body>

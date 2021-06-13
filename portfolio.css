@@ -1,6 +1,8 @@
 :root {
-  --branding-color: #6c63ff;
-  --secondary-color: #f9f7fe;
+  --branding-color: #ffba90;
+  --secondary-color: #eae7ff;
+  --heading-color: #3d2e55;
+  --text-color: #595880;
   --heading-font-family: "Playfair Display", serif;
   --defualt-font-family: "Poppins", sans-serif;
 }
@@ -24,7 +26,7 @@ nav li {
 }
 
 nav a {
-  color: #272142;
+  color: var(--text-color);
   font-weight: bold;
   text-decoration: none;
 }
@@ -56,49 +58,51 @@ nav .active {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-  color: black;
+h4 {
+  color: var(--heading-color);
   font-family: var(--heading-font-family);
   font-weight: bold;
 }
 
 .homepage h1,
-.content-container h1 {
+.pageContainer h1 {
   font-size: 96px;
   line-height: 1.5;
 }
 
 .homepage h2,
-.content-container h2 {
+.pageContainer h2 {
   font-size: 64px;
 }
 
 .homepage p,
-.content-container p {
+.pageContainer p {
   font-weight: normal;
   font-size: 16px;
   line-height: 30px;
 }
 
-.homepage .hero {
+.homepage .hero,
+.headingContainer {
   background-color: var(--secondary-color);
   text-align: center;
   padding: 160px 20px;
 }
 
-.homepage .hero p,
-.content-container h3 {
-  color: #272142;
+.pageContainer h3 {
+  color: var(--text-color);
   font-size: 36px;
   font-weight: bold;
   line-height: 36px;
 }
 
+.Image{
+  max-height: 550px;
+}
+
 .homepage .hero h2,
-.content-container h2 {
-  color: #272142;
+.pageContainer h2 {
+  color: var(--text-color);
   font-family: var(--defualt-font-family);
   font-size: 24px;
   font-weight: normal;
@@ -108,6 +112,7 @@ h6 {
 .homepage .btn-branding,
 footer .contactButton {
   background: var(--branding-color);
+   border:2px solid var(--branding-color);
   border-radius: 4px;
   color: white;
   font-size: 18px;
@@ -115,60 +120,75 @@ footer .contactButton {
   padding: 18px 30px;
 }
 
+.homepage .btn-branding:hover,
+ footer .contactButton:hover{
+   border:2px solid white;
+   color: white;
+ }
+
 .homepage .project-btn,
-.content-container .project-btn {
+.pageContainer .projectButton,
+.pageContainer .learnMore:hover,
+.contact a {
+  background-color: white;
   border: 1px solid var(--branding-color);
   border-radius: 4px;
   color: var(--branding-color);
   font-size: 18px;
   line-height: 27px;
+  text-decoration: none;
   padding: 18px 30px;
 }
 
 .homepage .project-btn:hover,
-.content-container .project-btn:hover {
+.pageContainer .projectButton:hover,
+.pageContainer .learnMore,
+.contact a:hover{
   background-color: var(--branding-color);
   border: 1px solid white;
   color: white;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 18px 30px;
 }
 
 .homepage .project-description {
   padding: 120px 0px 0px 60px;
 }
 
-.content-container .content {
+.pageContainer .headingContent {
   background-color: var(--secondary-color);
   padding: 80px 160px;
 }
-.content-container h3 {
+.pageContainer h3 {
   margin: 20px;
 }
 
-.content-container .projects {
+.pageContainer .projects {
   margin: 10px;
 }
 
-.content-container .work {
+.pageContainer .work {
   margin-top: 30px;
   text-align: center;
 }
+
+.projectIcons i{
+font-size: 50px;
+color: var(--heading-color);
+padding: 5px;
+margin: 10px;
+
+}
+.projectButtons{
+justify-content: space-between;
+}
+
 .contact {
   text-align: center;
 }
 
-.contact a {
-  font-size: 24px;
-  text-decoration: none;
-  color: var(--branding-color);
-  text-transform: uppercase;
-  padding: 0 3px;
-}
-
-.contact a:hover {
-  background-color: var(--branding-color);
-  color: var(--secondary-color);
-  font-family: var(--defualt-font-family);
-}
 footer {
   padding: 10px;
   margin: 20px;
@@ -177,7 +197,8 @@ footer {
 
 footer .contactMeBox {
   background-color: var(--secondary-color);
-  padding: 30px 120px;
+  margin: 0 250px;
+  padding: 30px 80px;
 }
 
 footer .email {
@@ -185,7 +206,7 @@ footer .email {
 }
 
 footer a {
-  color: #272142;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -198,9 +219,29 @@ footer .icon {
   line-height: 45px;
 }
 
+.ImageMe {
+  border: 3px solid var(--branding-color);
+  padding: 5px;
+  max-height: 550px;
+}
+
+.smallImagecontainer {
+  text-align: center;
+}
+
+.smallImage {
+  border: 3px solid var(--branding-color);
+  border-radius: 50%;
+  padding: 3px;
+  max-height: 270px;
+  margin: 5px;
+}
+
+
+
 @media (max-width: 768px) {
   .homepage h1,
-  .content-container h1 {
+  .pageContainer h1 {
     font-size: 44px;
     line-height: 1;
   }
@@ -216,22 +257,23 @@ footer .icon {
     text-align: center;
   }
 
-  .content-container .content {
+  .pageContainer .headingContent {
+    text-align: center;
     padding: 30px 20px;
   }
 
-  .content-container h3 {
+  .pageContainer h3 {
     margin: 20px 0;
     text-align: center;
     font-size: 30px;
     line-height: 32px;
   }
 
-  .content-container p {
+  .pageContainer p {
     text-align: center;
   }
 
-  .content-container .project-btn {
+  .pageContainer .project-btn {
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -246,3 +288,4 @@ footer .icon {
     line-height: 44px;
   }
 }
+contactMeBox
