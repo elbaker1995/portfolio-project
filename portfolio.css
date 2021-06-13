@@ -9,20 +9,21 @@
 
 body {
   font-family: var(--defualt-font-family);
+  margin: 0 auto;
 }
 
 nav {
-  padding: 5px;
+  background-color: white;
+  margin: 0 auto;
+}
+.container {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 nav ul {
   padding: 0;
   margin: 0 75px;
-}
-
-nav li {
-  list-style: none;
-  display: inline;
 }
 
 nav a {
@@ -34,6 +35,8 @@ nav a {
 nav .pages {
   font-size: 16px;
   line-height: 62px;
+  list-style: none;
+  display: inline;
 }
 
 nav a:hover,
@@ -86,17 +89,23 @@ h4 {
 .headingContainer {
   background-color: var(--secondary-color);
   text-align: center;
+  margin-top: 50px;
   padding: 160px 20px;
 }
 
 .pageContainer h3 {
-  color: var(--text-color);
   font-size: 36px;
-  font-weight: bold;
+  line-height: 36px;
+  margin: 20px;
+}
+
+.pageContainer h4 {
+  color: var(--text-color);
+  font-size: 30px;
   line-height: 36px;
 }
 
-.Image{
+.Image {
   max-height: 550px;
 }
 
@@ -112,7 +121,7 @@ h4 {
 .homepage .btn-branding,
 footer .contactButton {
   background: var(--branding-color);
-   border:2px solid var(--branding-color);
+  border: 2px solid var(--branding-color);
   border-radius: 4px;
   color: white;
   font-size: 18px;
@@ -121,10 +130,10 @@ footer .contactButton {
 }
 
 .homepage .btn-branding:hover,
- footer .contactButton:hover{
-   border:2px solid white;
-   color: white;
- }
+footer .contactButton:hover {
+  border: 2px solid white;
+  color: white;
+}
 
 .homepage .project-btn,
 .pageContainer .projectButton,
@@ -143,7 +152,7 @@ footer .contactButton {
 .homepage .project-btn:hover,
 .pageContainer .projectButton:hover,
 .pageContainer .learnMore,
-.contact a:hover{
+.contact a:hover {
   background-color: var(--branding-color);
   border: 1px solid white;
   color: white;
@@ -159,30 +168,28 @@ footer .contactButton {
 
 .pageContainer .headingContent {
   background-color: var(--secondary-color);
+  margin-top: 50px;
   padding: 80px 160px;
-}
-.pageContainer h3 {
-  margin: 20px;
 }
 
 .pageContainer .projects {
   margin: 10px;
 }
 
-.pageContainer .work {
+.pageContainer .work,
+.pageContainer {
   margin-top: 30px;
   text-align: center;
 }
 
-.projectIcons i{
-font-size: 50px;
-color: var(--heading-color);
-padding: 5px;
-margin: 10px;
-
+.projectIcons i {
+  font-size: 50px;
+  color: var(--heading-color);
+  padding: 5px;
+  margin: 10px;
 }
-.projectButtons{
-justify-content: space-between;
+.projectButtons {
+  justify-content: space-between;
 }
 
 .contact {
@@ -197,7 +204,7 @@ footer {
 
 footer .contactMeBox {
   background-color: var(--secondary-color);
-  margin: 0 250px;
+  margin: 0 100px;
   padding: 30px 80px;
 }
 
@@ -237,20 +244,19 @@ footer .icon {
   margin: 5px;
 }
 
-
-
 @media (max-width: 768px) {
   .homepage h1,
   .pageContainer h1 {
     font-size: 44px;
     line-height: 1;
   }
+
   .homepage h2 {
     font-size: 44px;
   }
 
   .homepage .hero {
-    padding: 80px 20px;
+    padding: 100px 20px;
   }
   .homepage .project-description {
     padding: 0;
@@ -269,23 +275,52 @@ footer .icon {
     line-height: 32px;
   }
 
+  .pageContainer h4 {
+    font-size: 27px;
+    line-height: 32px;
+  }
+
   .pageContainer p {
     text-align: center;
   }
 
-  .pageContainer .project-btn {
-    margin: 0 auto;
+  .pageContainer .project-btn,
+  .pageContainer .learnMore,
+  .pageContainer .projectButton {
+    margin: 10px auto;
     display: flex;
     justify-content: center;
   }
-  nav ul {
+
+  .projectIcons i {
+    font-size: 50px;
+    margin: 5px;
     padding: 0;
-    margin: 0 10px;
+  }
+
+  .Image {
+    margin: 10px auto;
+    max-height: 400px;
+  }
+
+  nav ul {
+    padding: 0 auto;
+    margin: 0 auto;
   }
 
   nav .pages {
     font-size: 12px;
     line-height: 44px;
   }
+
+  footer .contactMeBox {
+    margin: 0 auto;
+  }
+
+  footer .icon {
+    margin: 5px;
+    padding: 8px 11px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
-contactMeBox
