@@ -9,7 +9,11 @@
 
 body {
   font-family: var(--defualt-font-family);
-  margin: 0 auto;
+  margin: 0;
+}
+
+nav {
+  background-color: var(--secondary-color);
 }
 
 .navbar-brand {
@@ -34,10 +38,6 @@ body {
   margin: 0px;
 }
 
-nav .container {
-  background-color: var(--secondary-color);
-}
-
 nav a:hover,
 footer a:hover,
 .nav-item .logo:hover {
@@ -51,7 +51,7 @@ nav .active {
 .top-banner {
   background-color: var(--branding-color);
   color: var(--secondary-color);
-  margin: 0 70px;
+  margin: auto;
   padding: 5px;
   text-align: center;
 }
