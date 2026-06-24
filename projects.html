@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,41 +6,514 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Eleanor is a Business Analyst engineer based in London. Learn about and veiw all of her current work here."
+      content="Eleanor Baker — Business Analyst & CRM Specialist. View all projects."
     />
-    <title>Projects Eleanor Baker</title>
+    <title>My Projects — Eleanor Baker</title>
 
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="portfolio.css".css">
-
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/ee7684dcaf.js"
       crossorigin="anonymous"
     ></script>
+
+    <style>
+      :root {
+        --ink: #1c1d1f;
+        --ink-light: #4a4b4d;
+        --cream: #f6f4f1;
+        --cream-dark: #ece9e4;
+        --accent: #b5a48a;
+        --accent-dark: #8c7d66;
+        --white: #ffffff;
+        --card-border: rgba(28, 29, 31, 0.1);
+        --heading-font: "Playfair Display", serif;
+        --body-font: "DM Sans", sans-serif;
+        --radius: 6px;
+        --transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--body-font);
+        color: var(--ink);
+        background-color: var(--cream);
+        margin: 0;
+      }
+
+      /* ── NAVBAR ─────────────────────────────────── */
+      .navbar {
+        background-color: var(--white);
+        border-bottom: 1px solid var(--card-border);
+        padding: 0;
+      }
+      .navbar-nav {
+        gap: 0;
+      }
+      .nav-link {
+        font-family: var(--body-font);
+        font-size: 0.875rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink-light) !important;
+        padding: 1.25rem 1.5rem !important;
+        transition: var(--transition);
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--ink) !important;
+      }
+      .logo {
+        font-family: var(--heading-font);
+        font-size: 1.35rem;
+        font-weight: 600;
+        color: var(--ink) !important;
+        text-decoration: none;
+        letter-spacing: 0.01em;
+      }
+      .navbar-brand {
+        font-family: var(--heading-font);
+        color: var(--ink) !important;
+        text-decoration: none;
+      }
+      .top-banner {
+        background-color: var(--ink);
+        color: var(--cream);
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.55rem 1rem;
+        text-align: center;
+      }
+
+      /* ── PAGE HEADER ────────────────────────────── */
+      .page-header {
+        padding: 90px 20px;
+        text-align: center;
+        background: var(--white);
+      }
+      .page-header h1 {
+        font-family: var(--heading-font);
+        font-size: 74px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--ink);
+        margin-bottom: 0.75rem;
+      }
+      .page-header p {
+        font-size: 1.05rem;
+        color: var(--ink-light);
+        max-width: 520px;
+        margin: 0 auto;
+        font-weight: 300;
+        line-height: 1.7;
+      }
+
+      /* ── FILTER BAR ─────────────────────────────── */
+      .filter-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+        padding: 2rem 1rem 1rem;
+      }
+      .filterButton {
+        font-family: var(--body-font);
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        padding: 0.55rem 1.25rem;
+        border: 1.5px solid var(--ink);
+        border-radius: 100px;
+        background: transparent;
+        color: var(--ink);
+        cursor: pointer;
+        transition: var(--transition);
+      }
+      .filterButton:hover {
+        background: var(--ink);
+        color: var(--cream);
+      }
+      .filterButton.active {
+        background: var(--ink);
+        color: var(--cream);
+      }
+
+      /* ── PROJECTS GRID ──────────────────────────── */
+      .projects-section {
+        padding: 1.5rem 1.5rem 4rem;
+      }
+
+      .project-card {
+        background: var(--white);
+        border: 1px solid var(--card-border);
+        border-radius: var(--radius);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: var(--transition);
+        cursor: pointer;
+      }
+      .project-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(28, 29, 31, 0.12);
+        border-color: var(--accent);
+      }
+
+      .card-thumb {
+        height: 200px;
+        overflow: hidden;
+        background: var(--cream-dark);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .card-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      .project-card:hover .card-thumb img {
+        transform: scale(1.04);
+      }
+      .card-thumb-emoji {
+        font-size: 3rem;
+        opacity: 0.6;
+      }
+
+      .card-body-inner {
+        padding: 1.4rem 1.5rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      /* Category badge */
+      .cat-badge {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: var(--accent-dark);
+        margin-bottom: 0.6rem;
+      }
+
+      .card-title {
+        font-family: var(--heading-font);
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+      }
+      .card-desc {
+        font-size: 0.875rem;
+        color: var(--ink-light);
+        line-height: 1.65;
+        flex: 1;
+        margin-bottom: 1rem;
+      }
+
+      /* Skill chips */
+      .skill-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        margin-bottom: 1rem;
+      }
+      .chip {
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        padding: 0.2rem 0.6rem;
+        border-radius: 100px;
+        background: var(--cream-dark);
+        color: var(--ink-light);
+        border: 1px solid var(--cream-dark);
+      }
+
+      .card-footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid var(--cream-dark);
+        padding-top: 0.85rem;
+        margin-top: auto;
+      }
+      .card-year {
+        font-size: 0.78rem;
+        color: var(--accent-dark);
+        font-weight: 500;
+        letter-spacing: 0.05em;
+      }
+      .view-btn {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--ink);
+        text-decoration: none;
+        letter-spacing: 0.04em;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+      .view-btn:hover {
+        color: var(--accent-dark);
+      }
+      .view-btn .arrow {
+        transition: transform 0.2s ease;
+      }
+      .view-btn:hover .arrow {
+        transform: translateX(4px);
+      }
+
+      /* ── STATS BAR ──────────────────────────────── */
+      .stats-bar {
+        background: var(--ink);
+        color: var(--cream);
+        padding: 3rem 2rem;
+        text-align: center;
+      }
+      .stats-bar h2 {
+        font-family: var(--heading-font);
+        font-size: 1.4rem;
+        color: var(--cream);
+        margin-bottom: 2rem;
+        letter-spacing: -0.01em;
+      }
+      .stat-number {
+        font-family: var(--heading-font);
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: var(--accent);
+        display: block;
+        line-height: 1;
+        margin-bottom: 0.4rem;
+      }
+      .stat-label {
+        font-size: 0.8rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: rgba(246, 244, 241, 0.55);
+      }
+
+      /* ── MODAL ──────────────────────────────────── */
+      .eb-modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(28, 29, 31, 0.65);
+        backdrop-filter: blur(4px);
+        z-index: 1040;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        animation: fadeOverlay 0.2s ease;
+      }
+      @keyframes fadeOverlay {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .eb-modal {
+        background: var(--white);
+        border-radius: 10px;
+        width: 100%;
+        max-width: 720px;
+        max-height: 90vh;
+        overflow-y: auto;
+        box-shadow: 0 32px 80px rgba(28, 29, 31, 0.3);
+        animation: slideUp 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        scrollbar-width: thin;
+      }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .eb-modal-header {
+        padding: 1.6rem 1.8rem 1.2rem;
+        border-bottom: 1px solid var(--cream-dark);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        position: sticky;
+        top: 0;
+        background: var(--white);
+        z-index: 2;
+      }
+      .eb-modal-title {
+        font-family: var(--heading-font);
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--ink);
+        margin: 0;
+        line-height: 1.3;
+      }
+      .eb-modal-close {
+        background: var(--cream);
+        border: none;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.1rem;
+        color: var(--ink-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: var(--transition);
+      }
+      .eb-modal-close:hover {
+        background: var(--cream-dark);
+        color: var(--ink);
+      }
+
+      .eb-modal-carousel .carousel-item img {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .eb-modal-body {
+        padding: 1.8rem;
+      }
+
+      .modal-section-label {
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent-dark);
+        margin-bottom: 0.6rem;
+        display: block;
+      }
+      .modal-desc {
+        font-size: 0.93rem;
+        color: var(--ink-light);
+        line-height: 1.75;
+        margin-bottom: 1.6rem;
+      }
+      .modal-achievements {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.6rem;
+      }
+      .modal-achievements li {
+        font-size: 0.9rem;
+        color: var(--ink-light);
+        padding: 0.5rem 0 0.5rem 1.2rem;
+        position: relative;
+        border-bottom: 1px solid var(--cream-dark);
+        line-height: 1.55;
+      }
+      .modal-achievements li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-weight: 600;
+      }
+      .modal-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .modal-link-btn {
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 0.45rem 1rem;
+        border: 1.5px solid var(--ink);
+        border-radius: 100px;
+        color: var(--ink);
+        text-decoration: none;
+        transition: var(--transition);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .modal-link-btn:hover {
+        background: var(--ink);
+        color: var(--cream);
+      }
+
+      /* ── HIDDEN / ANIMATION ─────────────────────── */
+      .project-hidden {
+        display: none !important;
+      }
+      .fade-in {
+        animation: cardFadeIn 0.35s ease both;
+      }
+      @keyframes cardFadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ── RESPONSIVE ─────────────────────────────── */
+      @media (max-width: 768px) {
+        .page-header {
+          padding: 4rem 1.5rem 2rem;
+        }
+        .page-header h1 {
+          font-size: 44px;
+          line-height: 1;
+        }
+        .eb-modal-carousel .carousel-item img {
+          height: 220px;
+        }
+      }
+    </style>
   </head>
   <body>
-        <header class="fixed-top">
+    <!-- ── NAVBAR ──────────────────────────────────── -->
+    <header class="fixed-top">
       <nav class="navbar navbar-expand-lg navbar-light py-0">
-        <div class="container-fluid p-0 m-70">
-          <!-- Mobile toggle button -->
+        <div class="container-fluid p-0" style="padding: 0 1.5rem">
           <button
             class="navbar-toggler ms-3"
             type="button"
@@ -52,22 +525,12 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <!-- Brand for small screens -->
           <a class="navbar-brand d-lg-none" href="./index.html"
             >Eleanor Baker</a
           >
-          <!-- Collapsible nav links -->
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul
-              class="
-                navbar-nav
-                w-100
-                d-flex
-                flex-column flex-lg-row
-                justify-content-around
-                align-items-center
-                text-center
-              "
+              class="navbar-nav w-100 d-flex flex-column flex-lg-row justify-content-around align-items-center text-center"
             >
               <li class="nav-item">
                 <a class="nav-link" href="./about.html">About</a>
@@ -75,11 +538,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="./certificates.html">Certificates</a>
               </li>
-              <!-- Centered logo for large screens only -->
               <li class="nav-item d-none d-lg-block">
                 <a class="logo" href="./index.html">Eleanor Baker</a>
               </li>
-
               <li class="nav-item">
                 <a class="nav-link active" href="./projects.html">Projects</a>
               </li>
@@ -90,134 +551,1632 @@
           </div>
         </div>
       </nav>
-
-      <!-- Banner Under Navbar -->
-      <div class="top-banner text-center">
-        Open to opportunities in business analysis, marketing management, and creative strategy.
+      <div class="top-banner">
+        Open to roles in Business Analysis · CRM Management · Salesforce
+        Administration · Sales Development
       </div>
     </header>
-    <div class="pageContainer container-fluid">
-      <div class="content">
-        <div class="headingContainer">
-        <h1>My projects so far</h1>
-        </div>
+
+    <!-- ── PAGE HEADER ──────────────────────────────── -->
+    <div style="padding-top: 88px">
+      <div class="page-header">
+        <h1>My Projects</h1>
+        <p>
+          A showcase of work across project management, events, AI integration,
+          CRM, and creative strategy
+        </p>
       </div>
-      <div class="projects row">
-        <div class="col-lg-6 mb-4">
-          <a href="https://zealous-johnson-734ee0.netlify.app/" target="_blank" title="Dictionary Project">
-          <img
-            src="./src/dictionary project.png"
-            alt="Dictionary Project Image"
-            class="img-fluid Image"
-        /></a>
-          <h3 class="my-2">Dictionary App</h3>
-          <p class="text-muted">Built with React</p>
-          <p class="text-muted d-flex justify-content-around projectIcons">
-          <i class="fab fa-react" title="React"></i>
-          <i class="fab fa-js-square" title="JavaScript"></i>
-          <i class="fab fa-css3-alt" title="CSS"></i>
-          <i class="fab fa-html5" title="HTML"></i>
-          <i class="fab fa-bootstrap" title="Bootstrap"></i>
-          <i class="fab fa-github-square" title="GitHub"></i>
-        </p>
-          <p class="my-3 text-muted">
-            I created the Dictionary project using React, an interactive app
-            that uses multiple API’s to be able to display the definition and
-            images at the same time. The dictionary is also fully responsive
-            across different devices. This project allowed me to show off the
-            skill I have learnt so far in my coding journey.
-          </p>
-            <br />
-          <a
-            href="https://zealous-johnson-734ee0.netlify.app/"
-            class="btn projectButton"
-            target="_blank"
-            title="Dictionary Project"
-            >Go to Project</a
-          >
-        </div>
-        <div class="col-lg-6 mb-4">
-          <a href="https://objective-haibt-b80dac.netlify.app/" target="_blank" title="Weather App">
-          <img
-            src="./src/weather project.png"
-            alt="Weather Project Image"
-            class="img-fluid Image"
-        /></a>
-          <h3 class="my-2">Weather Project</h3>
-          <p class="text-muted">Built with React</p>
-          <p class="text-muted d-flex justify-content-around projectIcons">
-          <i class="fab fa-react" title="React"></i>
-          <i class="fab fa-js-square" title="JavaScript"></i>
-          <i class="fab fa-css3-alt" title="CSS"></i>
-          <i class="fab fa-html5" title="HTML"></i>
-          <i class="fab fa-bootstrap" title="Bootstrap"></i>
-          <i class="fab fa-github-square" title="GitHub"></i>
-        </p>
-          <p class="my-3 text-muted">
-            The Weather app shows the current weather conditions and the
-            forecast in your current location and any city across the world.
-            This project was one I worked on throughout the course, starting as
-            a wireframe then created using HTML, CSS and JavaScript. As I
-            developed my skills in React, I was able to convert the Weather
-            project to a React app.
-          </p>
-          <a
-            href="https://objective-haibt-b80dac.netlify.app/"
-            class="btn projectButton"
-            target="_blank"
-            title="Weather App"
-            >Go to Project</a
-          >
-        </div>
-      </div>
-      <div class="mb-4">
-        <div class="justify-content-center">
-          <img
-            src="./src/portfolioproject.png"
-            alt="Portfolio Project Image"
-            class="img-fluid"
-        /></div>
-          <h3 class="my-2 text-center">Responsive Portfolio</h3>
-          <p class="text-muted d-flex justify-content-around projectIcons">
-          <i class="fab fa-js-square" title="JavaScript"></i>
-          <i class="fab fa-css3-alt" title="CSS"></i>
-          <i class="fab fa-html5" title="HTML"></i>
-          <i class="fab fa-bootstrap" title="Bootstrap"></i>
-          <i class="fab fa-github-square" title="GitHub"></i>
-          <i class="fab fa-google" title="SEO"></i>
-        </p>
-          <p class="my-3 text-muted text-center">
-            Creating the portfolio gave me an understanding of a multiple page hosting responsive website across different platforms using advanced Bootstrap and Flexbox. Allowing me to create a place where I can show off all my work together.
-          </p>
-        </div>
     </div>
-      <footer>
-    <div class="contactMeBox justify-content-between d-none d-lg-flex">
-      <div>
-        <h3>Work Enquiry</h3>
-        <p class="text-muted mb-0">Lets work together</p>
-      </div>
-      <a href="./contact.html" class="btn contactButton" title="Contact page">Contact Me</a>
+
+    <!-- ── FILTER BAR ───────────────────────────────── -->
+    <div class="filter-bar">
+      <button class="filterButton active" data-category="all">All</button>
+      <button class="filterButton" data-category="projects">
+        Project Management
+      </button>
+      <button class="filterButton" data-category="events">Events</button>
+      <button class="filterButton" data-category="AI">AI & Tech</button>
+      <button class="filterButton" data-category="coding">Coding</button>
+      <button class="filterButton" data-category="crm">CRM & Data</button>
     </div>
-    <p class="text-muted mt-3">
-      Coded and designed by Eleanor Baker
-      <br />
-<div class="m-2">
-      <a href="mailto:elbaker1995@gmail.com" class="icon m-2" title="Eleanor's Email Address"
-        ><i class="far fa-envelope"></i
-      ></a>
-      <a href="https://github.com/elbaker1995" target="blank" class="icon m-2" title="Eleanor's GitHub"
-        ><i class="fab fa-github"></i
-      ></a>
-      <a
-        href="https://www.linkedin.com/in/eleanorbaker5595/"
-        target="blank"
-        class="icon m-2"
-        title="Eleanor's LinkedIn"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
+
+    <!-- ── PROJECTS GRID ─────────────────────────────── -->
+    <div class="projects-section">
+      <div class="row g-4" id="projectsGrid">
+        <!-- ── PROJECT: YKK DSR Inspiration Booth ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="projects"
+            data-title="YKK DSR Inspiration Booth"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/DSR Project/DSR Project img1.png"
+                alt="YKK DSR Inspiration Booth"
+                onerror="
+                  this.parentElement.innerHTML =
+                    '<span class=\'card-thumb-emoji\'>🏗️</span>'
+                "
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Project Management</span>
+              <h3 class="card-title">YKK DSR Inspiration Booth</h3>
+              <p class="card-desc">Led the Digital Showroom and Inspiration Booth at YKK, coordinating a team across Japan, a UK university, a designer, and an external developer to deliver an interactive digital experience showcasing YKK's products.</p>
+              <div class="skill-chips">
+                <span class="chip">Stakeholder Management</span>
+                <span class="chip">Cross-functional Leadership</span>
+                <span class="chip">Problem Solving</span>
+                <span class="chip">Relationship Management</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2023 – 2025</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT: AiryString ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="projects"
+            data-title="AiryString Project"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/AiryString/AiryString img1.jpeg"
+                alt="AiryString Project"
+                onerror="
+                  this.parentElement.innerHTML =
+                    '<span class=\'card-thumb-emoji\'>🌐</span>'
+                "
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Project Management</span>
+              <h3 class="card-title">AiryString Project</h3>
+              <p class="card-desc">
+                Coordinated an international collaboration with YKK Japan, from
+                specialist training in France through to a week-long series of
+                workshops and an evening launch event for a window display,
+                including managing garment shipments from Japan and machinery
+                delivery throughout.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">International Logistics</span>
+                <span class="chip">Event Management</span>
+                <span class="chip">Campaign Promotion</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2024</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT: 10 Year Anniversary ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="projects"
+            data-title="YKK London Showroom 10 Year Anniversary"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/10YearAnniversary/10YearAnniversary 1.jpg"
+                alt="YKK London Showroom 10 Year Anniversary"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>🥂</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Project Management</span>
+              <h3 class="card-title">
+                YKK London Showroom 10 Year Anniversary
+              </h3>
+              <p class="card-desc">
+                Multi-faceted anniversary project — historical booklet,
+                competition management, window display design, and VIP
+                promotional campaign.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Brand Strategy</span>
+                <span class="chip">Content Production</span>
+                <span class="chip">Budget Management</span>
+                <span class="chip">PR</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2024</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT: Future Fabrics Expo ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="projects"
+            data-title="Future Fabrics Expo"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/FFE 24/ffe24 img1.jpeg"
+                alt="Future Fabrics Expo"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>🤝</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">B2B Sales &amp; Networking</span>
+              <h3 class="card-title">Future Fabrics Expo</h3>
+              <p class="card-desc">
+                Represented YKK at Future Fabrics Expo for three consecutive
+                years, planning workshops and seminars, hosting customer
+                meetings on the stand, generating new business leads, and
+                promoting attendance through multi-channel marketing campaigns.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">B2B Networking</span>
+                <span class="chip">Lead Generation</span>
+                <span class="chip">Event Management</span>
+                <span class="chip">Market Research</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2023 – 2025</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── EVENT: Dead Stock Week Nov 2024 ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="events"
+            data-title="Dead Stock Week Nov 2024"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/Deadstock24Nov/Deadstock24Nov img1.jpeg"
+                alt="Dead Stock Week Nov 2024"
+                onerror="
+                  this.parentElement.innerHTML =
+                    '<span class=\'card-thumb-emoji\'>♻️</span>'
+                "
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Sustainability Event</span>
+              <h3 class="card-title">Dead Stock Week Nov 2024</h3>
+              <p class="card-desc">
+                Sustainable fashion event with comprehensive email campaigns,
+                social media promotion, paid advertising, and AI-powered content
+                generation.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Email Marketing</span>
+                <span class="chip">Paid Social</span>
+                <span class="chip">AI Content</span>
+                <span class="chip">Presenting</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">Nov 2024</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── EVENT: Bianca Saunders & Saul Nash ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="events"
+            data-title="Bianca Saunders & Saul Nash Window Display"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/Bianca&Saul/Bianca&Saul img1.jpeg"
+                alt="Bianca Saunders & Saul Nash Window Display"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>🎨</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Fashion Event</span>
+              <h3 class="card-title">
+                Bianca Saunders &amp; Saul Nash Window Display
+              </h3>
+              <p class="card-desc">
+                Designer collaboration event — window display management,
+                multi-platform marketing campaigns, and promotional content
+                strategy.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Designer Relations</span>
+                <span class="chip">Visual Merchandising</span>
+                <span class="chip">Multi-platform Marketing</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2024</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── EVENT: 10 Years Award Winner ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="events"
+            data-title="10 Years of Award Winner"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/10YearsAward/10YearsAward 1.jpg"
+                alt="10 Years of Award Winner"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>🏆</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Awards Event</span>
+              <h3 class="card-title">10 Years of Award Winner</h3>
+              <p class="card-desc">
+                Awards celebration with full team management, budgeting, legal
+                compliance, and coordinated multi-platform promotional
+                campaigns.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Budget Management</span>
+                <span class="chip">Legal Compliance</span>
+                <span class="chip">PR Campaigns</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2024</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── EVENT: Graduate Fashion Week 2024 ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="events"
+            data-title="Graduate Fashion Week 2024 YKK Award Winners"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/GFW24/GFW24 IMG1.jpeg"
+                alt="Graduate Fashion Week 2024 YKK Award Winners"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>🎓</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Graduate Event</span>
+              <h3 class="card-title">
+                Graduate Fashion Week 2024 — YKK Award Winners
+              </h3>
+              <p class="card-desc">
+                Graduate fashion showcase with award management, social media
+                campaigns, and comprehensive event coordination for emerging
+                designers.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Award Management</span>
+                <span class="chip">Social Campaigns</span>
+                <span class="chip">Event Coordination</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2024</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── EVENT: Unfixed ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="AI events"
+            data-title="Unfixed"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/Unfixed/unfixed1.jpeg"
+                alt="Unfixed"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>🔧</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Innovation Event · AI</span>
+              <h3 class="card-title">Unfixed</h3>
+              <p class="card-desc">
+                Innovation-focused event integrating generative AI tools, team
+                management, and digital marketing strategy for a
+                forward-thinking fashion audience.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Generative AI</span>
+                <span class="chip">Digital Marketing</span>
+                <span class="chip">Team Management</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2024</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── EVENT: Xavier Brisoux ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="events"
+            data-title="Xavier Brisoux at London Craft Week"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/LCW/LCW24 img1.jpeg"
+                alt="Xavier Brisoux at London Craft Week"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>🎭</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Craft Event</span>
+              <h3 class="card-title">Xavier Brisoux at London Craft Week</h3>
+              <p class="card-desc">
+                Artisan showcase during London Craft Week — project management,
+                social media campaigns, and team coordination for a bespoke
+                craft installation.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Event Production</span>
+                <span class="chip">Social Media</span>
+                <span class="chip">Artisan Relations</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2024</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── EVENT: Accessories of Activism ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="events"
+            data-title="Accessories of Activism (Shelter)"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/Accessories of Activism/AccessoriesOfActivism img1.jpeg"
+                alt="Accessories of Activism (Shelter)"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>🏠</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Social Impact</span>
+              <h3 class="card-title">Accessories of Activism (Shelter)</h3>
+              <p class="card-desc">
+                Charity event supporting Shelter — travel management, team
+                coordination, and a full promotional campaign across social,
+                email, and press.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Charity Partnerships</span>
+                <span class="chip">Campaign Management</span>
+                <span class="chip">Press Relations</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2024</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── EVENT: Recall by Kristina Walsh ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="events"
+            data-title="Recall by Kristina Walsh"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/Recall/Recall img1.jpeg"
+                alt="Recall by Kristina Walsh"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>🖼️</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Art Exhibition</span>
+              <h3 class="card-title">Recall by Kristina Walsh</h3>
+              <p class="card-desc">
+                Art exhibition event management with social media campaigns and
+                multi-platform promotional strategy for an emerging fashion
+                artist.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Exhibition Management</span>
+                <span class="chip">Social Campaigns</span>
+                <span class="chip">Artist Relations</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2024</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── EVENT: Grad Fashion Week Sep 2023 ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="events"
+            data-title="Graduate Fashion Week 2023 (September)"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/GFW23Sept/GFW23Sept 1.jpg"
+                alt="Graduate Fashion Week 2023 (September)"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>🎓</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Graduate Event</span>
+              <h3 class="card-title">
+                Graduate Fashion Week 2023 — YKK Award Winners (September)
+              </h3>
+              <p class="card-desc">
+                Award management, comprehensive reporting, and multi-platform
+                marketing campaigns for emerging graduate designers.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Award Curation</span>
+                <span class="chip">Reporting</span>
+                <span class="chip">Marketing Campaigns</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">Sep 2023</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── EVENT: Grad Fashion Week Apr 2023 ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="events"
+            data-title="Graduate Fashion Week 2023 (April)"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/GFW23Apr/GFW23SEP1.jpeg"
+                alt="Graduate Fashion Week 2023 (April)"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>🎓</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Graduate Event</span>
+              <h3 class="card-title">
+                Graduate Fashion Week 2023 — YKK Award Winners (April)
+              </h3>
+              <p class="card-desc">
+                Spring graduate fashion showcase with full event coordination,
+                social media strategy, and YKK award management.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Event Coordination</span>
+                <span class="chip">Social Media</span>
+                <span class="chip">Award Management</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">Apr 2023</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── EVENT: Dead Stock Week Nov 24 (duplicate/sustainability card) ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="AI events"
+            data-title="Dead Stock Week Nov 24"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/Deadstock24Nov/Deadstock24Nov img1.jpeg"
+                alt="Dead Stock Week Nov 24"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>♻️</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Sustainability · AI</span>
+              <h3 class="card-title">Dead Stock Week Nov 24</h3>
+              <p class="card-desc">
+                Sustainable fashion week combining AI-powered content
+                generation, live presenting, team management, and integrated
+                promotional strategies.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">AI Content</span>
+                <span class="chip">Presenting</span>
+                <span class="chip">Team Management</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">Nov 2024</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── EVENT: Student Workshop Week ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="AI events"
+            data-title="Student Workshop Week Mar 2024"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/Deadstock24Mar/Deadstock24Mar img1.jpg"
+                alt="Student Workshop Week Mar 2024"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>🎓</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Workshop Event · AI</span>
+              <h3 class="card-title">Student Workshop Week Mar 2024</h3>
+              <p class="card-desc">
+                Educational workshop series on generative AI and prompt
+                engineering — student engagement strategy and curriculum
+                coordination for fashion students.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Generative AI</span>
+                <span class="chip">Prompt Engineering</span>
+                <span class="chip">Education Strategy</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">Mar 2024</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── EVENT: Dead Stock Week Nov 23 ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="AI events"
+            data-title="Dead Stock Week Nov 2023"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/Deadstock23Nov/Deadstock23Nov img1.jpg"
+                alt="Dead Stock Week Nov 2023"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>♻️</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Sustainability · AI</span>
+              <h3 class="card-title">Dead Stock Week Nov 2023</h3>
+              <p class="card-desc">
+                AI-powered sustainable fashion week — content campaigns,
+                presenting, and full event management coordination.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">AI-Powered Campaigns</span>
+                <span class="chip">Presenting</span>
+                <span class="chip">Event Management</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">Nov 2023</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── EVENT: Dead Stock Day May 23 ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="AI events"
+            data-title="Dead Stock Day May 2023"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/Deadstock23May/Deadstock23May 1.jpg"
+                alt="Dead Stock Day May 2023"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>♻️</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Sustainability · AI</span>
+              <h3 class="card-title">Dead Stock Day May 2023</h3>
+              <p class="card-desc">
+                Single-day sustainable fashion event with AI integration, legal
+                compliance review, and multi-channel promotional campaigns.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">AI Integration</span>
+                <span class="chip">Legal Compliance</span>
+                <span class="chip">Campaign Management</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">May 2023</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT: Dictionary App ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="coding"
+            data-title="Dictionary App"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/projectImages/dictionary project.png"
+                alt="Dictionary App"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>📖</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Coding</span>
+              <h3 class="card-title">Dictionary App</h3>
+              <p class="card-desc">
+                Interactive dictionary app built with React — search definitions
+                and images simultaneously. Fully responsive and built as a
+                deep-dive into React fundamentals.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">React</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">API Integration</span>
+                <span class="chip">Responsive Design</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2023</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT: Weather App ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="coding"
+            data-title="Weather App"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/projectImages/weather project.png"
+                alt="Weather App"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>🌤️</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Coding</span>
+              <h3 class="card-title">Weather App</h3>
+              <p class="card-desc">
+                Responsive weather app showing current conditions and forecasts
+                using live weather APIs with location-based data. Originally
+                built with JavaScript, later converted to React.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">React</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">Weather API</span>
+                <span class="chip">Responsive Design</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2023</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT: Portfolio Website ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="coding"
+            data-title="Portfolio Website"
+          >
+            <div class="card-thumb">
+              <img
+                src="./src/projectImages/portfolioproject.png"
+                alt="Portfolio Website"
+                onerror="this.parentElement.innerHTML='<span class=\'card-thumb-emoji\'>💻</span>'"
+              />
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Coding</span>
+              <h3 class="card-title">Portfolio Website</h3>
+              <p class="card-desc">
+                Designed and built this portfolio from scratch using HTML, CSS,
+                Bootstrap, and JavaScript — including responsive design, filter
+                logic, and modal interactions.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">HTML / CSS</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">Bootstrap</span>
+                <span class="chip">Responsive Design</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2024 – 2025</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PLACEHOLDER: CRM/Data Project ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="crm"
+            data-title="CRM & Data Analysis"
+          >
+            <div
+              class="card-thumb"
+              style="
+                background: linear-gradient(135deg, #b5a48a 0%, #292b2d 100%);
+              "
+            >
+              <span class="card-thumb-emoji">📊</span>
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">CRM · Data</span>
+              <h3 class="card-title">CRM & Campaign Data Analysis</h3>
+              <p class="card-desc">
+                Add your CRM or data analysis project here — Salesforce
+                dashboards, email campaign reporting, customer segmentation, or
+                pipeline tracking.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Salesforce</span>
+                <span class="chip">CRM</span>
+                <span class="chip">Data Analysis</span>
+                <span class="chip">Reporting</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2024 – 2025</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT: Salesforce CRM Implementation ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="crm"
+            data-title="Salesforce CRM Implementation and Optimisation"
+          >
+            <div
+              class="card-thumb"
+              style="background: linear-gradient(135deg, #1c7ed6 0%, #292b2d 100%);"
+            >
+              <span class="card-thumb-emoji">🔧</span>
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">CRM · Salesforce</span>
+              <h3 class="card-title">Salesforce CRM Implementation and Optimisation</h3>
+              <p class="card-desc">
+                Internal SME for Salesforce at YKK Europe — optimising the CRM, consolidating EU email marketing across entities, and building an automated client meeting capture system feeding directly into Salesforce.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Salesforce</span>
+                <span class="chip">CRM Optimisation</span>
+                <span class="chip">Data Governance</span>
+                <span class="chip">Email Integration</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2022 – 2025</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT: Office IT Infrastructure ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="projects"
+            data-title="Office IT Infrastructure Improvement Programme"
+          >
+            <div
+              class="card-thumb"
+              style="background: linear-gradient(135deg, #4a4b4d 0%, #292b2d 100%);"
+            >
+              <span class="card-thumb-emoji">🖥️</span>
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Business Analysis</span>
+              <h3 class="card-title">Office IT Infrastructure Improvement Programme</h3>
+              <p class="card-desc">
+                Led business analysis for a company-wide IT improvement initiative, working with KDDI Europe to gather requirements and deliver structured recommendations across infrastructure, hardware, and data systems.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Requirements Gathering</span>
+                <span class="chip">IT Infrastructure</span>
+                <span class="chip">Solution Evaluation</span>
+                <span class="chip">Stakeholder Management</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2022 – 2025</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT: Client Acquisition Event ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="events"
+            data-title="Client Acquisition Event — 838% Growth"
+          >
+            <div
+              class="card-thumb"
+              style="background: linear-gradient(135deg, #b5a48a 0%, #292b2d 100%);"
+            >
+              <span class="card-thumb-emoji">🎯</span>
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Events · Lead Generation</span>
+              <h3 class="card-title">Client Acquisition Event — 838% Growth</h3>
+              <p class="card-desc">
+                Designed and delivered a branded acquisition event that scaled from 60 to 563 attendees in a single year, generating 70+ qualified sales conversations and a pipeline of 90% new prospects.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Event Management</span>
+                <span class="chip">Lead Generation</span>
+                <span class="chip">Multi-channel Marketing</span>
+                <span class="chip">Budget Management</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2022 – 2025</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT: Digital Range Board Automation ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="projects"
+            data-title="Digital Range Board Automation"
+          >
+            <div
+              class="card-thumb"
+              style="background: linear-gradient(135deg, #4a4b4d 0%, #8c7d66 100%);"
+            >
+              <span class="card-thumb-emoji">📋</span>
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Automation · Data</span>
+              <h3 class="card-title">Digital Range Board Automation</h3>
+              <p class="card-desc">
+                Built an automated digital range board in Excel that replaced manual physical boards during remote working, pulling live product data and integrating images for both published and unreleased products.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Excel Automation</span>
+                <span class="chip">Product Data</span>
+                <span class="chip">Retail Buying</span>
+                <span class="chip">Process Improvement</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2019 – 2022</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT: Product Data Management ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="projects"
+            data-title="Product Data Management and Cataloguing"
+          >
+            <div
+              class="card-thumb"
+              style="background: linear-gradient(135deg, #8c7d66 0%, #292b2d 100%);"
+            >
+              <span class="card-thumb-emoji">📦</span>
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">Data Management</span>
+              <h3 class="card-title">Product Data Management and Cataloguing</h3>
+              <p class="card-desc">
+                Managed structured garment metadata in VisionPLM across multiple womenswear categories, maintaining data quality feeding directly into warehouse management and the Reiss ecommerce website.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">VisionPLM</span>
+                <span class="chip">Product Data</span>
+                <span class="chip">Ecommerce</span>
+                <span class="chip">Data Quality</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2019 – 2022</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT: Salesforce Lead Routing ── -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="project-card"
+            data-category="crm"
+            data-title="Salesforce Lead Routing & Automation System"
+          >
+            <div
+              class="card-thumb"
+              style="background: linear-gradient(135deg, #1c7ed6 0%, #4a4b4d 100%);"
+            >
+              <span class="card-thumb-emoji">⚡</span>
+            </div>
+            <div class="card-body-inner">
+              <span class="cat-badge">CRM · Salesforce Admin</span>
+              <h3 class="card-title">Salesforce Lead Routing & Automation System</h3>
+              <p class="card-desc">
+                Overhauled a broken lead management process for a fast-growing AI company — automating lead routing across EMEA, Americas, and APAC with stall detection, task creation, and a full role hierarchy structure.
+              </p>
+              <div class="skill-chips">
+                <span class="chip">Salesforce Flows</span>
+                <span class="chip">Lead Routing</span>
+                <span class="chip">Automation</span>
+                <span class="chip">CRM Administration</span>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-year">2025</span>
+                <button class="view-btn">
+                  View Details <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </p>
-  </footer>
+      <!-- /row -->
+    </div>
+    <!-- /projects-section -->
+
+    <!-- ── STATS BAR ─────────────────────────────────── -->
+    <div class="stats-bar">
+      <h2>By the Numbers</h2>
+      <div
+        class="row g-4 justify-content-center"
+        style="max-width: 700px; margin: 0 auto"
+      >
+        <div class="col-6 col-md-3">
+          <span class="stat-number">4</span>
+          <span class="stat-label">Major Projects</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Events Managed</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Countries</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <span class="stat-number">2+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MODAL TEMPLATE (injected by JS) ──────────── -->
+
+    <script>
+      // ── FILTER LOGIC (fixed: uses .filterButton, not .projectButton) ──
+      const filterButtons = document.querySelectorAll(".filterButton");
+      const projectCols = document.querySelectorAll(
+        "#projectsGrid .col-lg-4, #projectsGrid .col-md-6",
+      );
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const cat = btn.getAttribute("data-category");
+
+          filterButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          projectCols.forEach((col, i) => {
+            const card = col.querySelector(".project-card");
+            const cardCat = card ? card.getAttribute("data-category") : "";
+            const match = cat === "all" || cardCat.split(" ").includes(cat);
+
+            if (match) {
+              col.classList.remove("project-hidden");
+              col.classList.add("fade-in");
+              col.style.animationDelay = i * 0.04 + "s";
+            } else {
+              col.classList.add("project-hidden");
+              col.classList.remove("fade-in");
+            }
+          });
+        });
+      });
+
+      // ── PROJECT DATA ──────────────────────────────────
+      const projectData = {
+        "YKK DSR Inspiration Booth": {
+          images: [
+            "./src/DSR Project/DSR Project img1.png",
+            "./src/DSR Project/DSR Project img2.png",
+            "./src/DSR Project/DSR Project img3.JPG",
+            "./src/DSR Project/DSR Project img4.JPG",
+            "./src/DSR Project/DSR Project img5.JPG",
+            "./src/DSR Project/DSR Project img7.JPEG",
+            "./src/DSR Project/DSR Project img8.JPG",
+          ],
+          description: "A digital showroom and inspiration booth project bringing together stakeholders across Japan, a UK university, an external designer, and a developer to create an interactive experience showcasing YKK's products. With international requirements shifting throughout, the project required reworking timelines and resequencing delivery as priorities changed, while keeping every stakeholder aligned and the project moving forward.",
+          details: [
+            "Led a cross-functional team spanning international stakeholders in Japan, a UK university, an external designer, and a developer",
+            "Reworked timelines and resequenced delivery as international requirements shifted throughout the project",
+            "Identified that the original approach to capturing and presenting 3D scans didn't work in practice, and pivoted to a new format",
+            "Worked iteratively with the developer to test and refine sections of the site as they were built, rather than waiting until the end to review the whole platform",
+            "Brought potential solutions to the wider group for input before deciding direction, balancing input from the university, designer, and international team",
+            "Navigated internal approval processes while keeping the project on track",
+            "Launched successfully with strong support from all stakeholders involved",
+          ],
+          links: [
+            { text: "Project Website", url: "https://ykkdigitalshowroom.com/en/gf/inspiration/new_inspiration_gallery/2025" },
+            { text: "Fashion United Article", url: "https://fashionunited.uk/news/fashion/ykk-london-showroom-unveils-exclusive-digital-showroom-collaboration-with-london-college-of-fashion/2025022680355" },
+            { text: "Instagram", url: "https://www.instagram.com/p/DFnrdcxtk1j/?hl=en" },
+          ],
+        },
+        "AiryString Project": {
+          images: [
+            "./src/AiryString/AiryString img1.jpeg",
+            "./src/AiryString/AiryString img2.jpeg",
+            "./src/AiryString/AiryString img3.jpeg",
+            "./src/AiryString/AiryString img4.jpeg",
+            "./src/AiryString/AiryString img5.jpeg",
+            "./src/AiryString/AiryString img6.jpeg",
+          ],
+          description: "An international collaboration with YKK Japan spanning training, delivery, and live event execution. The project began with specialist training in France for the team and a creative consultant, equipping them to deliver a week-long series of workshops back in the UK. This led into an evening launch event celebrating a window display, for which garments were shipped from Japan and precision machinery delivered and installed throughout.",
+          details: [
+            "Coordinated specialist training in France for the team and a creative consultant, preparing for the UK workshop delivery",
+            "Delivered a week-long series of workshops in the UK as a direct result of the France training",
+            "Managed the shipment of garments from Japan for a window display",
+            "Oversaw precision machinery delivery, installation, and quality control throughout the project",
+            "Planned and delivered an evening launch event to celebrate the window display",
+            "Promoted the event through multi-channel marketing campaigns",
+          ],
+          links: [
+            { text: "Email Campaign", url: "./emailAiryString.html" },
+          ],
+        },
+        "Future Fabrics Expo": {
+          images: [],
+          description: "Represented YKK at Future Fabrics Expo, one of the largest international exhibitions for sustainable materials in fashion and textiles, for three consecutive years. The role combined event delivery with active business development, planning and running workshops and seminars, hosting customer meetings on YKK's stand, and building relationships with material suppliers, designers, buyers, and sustainability professionals across the industry.",
+          details: [
+            "Represented YKK at Future Fabrics Expo for three consecutive years (2023 to 2025)",
+            "Planned and delivered workshops and seminars for industry attendees",
+            "Hosted customer meetings on YKK's stand, generating new business leads",
+            "Built and maintained relationships with existing and prospective customers through networking",
+            "Promoted YKK's presence through multi-channel marketing, including email, social media, print, and PR",
+            "Monitored competitor activity and market trends to inform future strategy",
+          ],
+          links: [],
+        },
+        "Dead Stock Week Nov 2024": {
+          images: [
+            "./src/Deadstock24Nov/Deadstock24Nov img1.jpeg",
+            "./src/Deadstock24Nov/Deadstock24Nov img2.jpeg",
+            "./src/Deadstock24Nov/Deadstock24Nov img3.jpeg",
+            "./src/Deadstock24Nov/Deadstock24Nov img4.jpeg",
+          ],
+          description: "Sustainable fashion event with comprehensive email campaigns, social media promotion, paid advertising, and AI-powered content generation.",
+          details: ["Multi-channel email campaign strategy", "Paid social media advertising", "AI-powered content generation", "Live event presenting and hosting"],
+          links: [{ text: "Email Campaign", url: "./emailDSW1124.html" }],
+        },
+        "Dead Stock Week Nov 24": {
+          images: [
+            "./src/Deadstock24Nov/Deadstock24Nov img1.jpeg",
+            "./src/Deadstock24Nov/Deadstock24Nov img2.jpeg",
+            "./src/Deadstock24Nov/Deadstock24Nov img3.jpeg",
+            "./src/Deadstock24Nov/Deadstock24Nov img4.jpeg",
+          ],
+          description: "Sustainable fashion week combining AI-powered content generation, live presenting, team management, and integrated promotional strategies.",
+          details: ["AI content generation for campaigns", "Live event presenting", "Team management and coordination", "Integrated multi-channel promotion"],
+          links: [{ text: "Email Campaign", url: "./emailDSW1124.html" }],
+        },
+        "Bianca Saunders & Saul Nash Window Display": {
+          images: ["./src/Bianca&Saul/Bianca&Saul img1.jpeg"],
+          description: "Designer collaboration event — window display management, multi-platform marketing campaigns, and promotional content strategy.",
+          details: ["Designer liaison and relationship management", "Window display concept and execution", "Multi-platform marketing campaign", "Promotional content creation"],
+          links: [],
+        },
+        "Graduate Fashion Week 2024 YKK Award Winners": {
+          images: [
+            "./src/GFW24/GFW24 IMG1.jpeg",
+            "./src/GFW24/GFW24 IMG2.jpg",
+            "./src/GFW24/GFW24 IMG3.jpeg",
+            "./src/GFW24/GFW24 IMG4.jpg",
+            "./src/GFW24/IMG_6441.jpeg",
+          ],
+          description: "Graduate fashion showcase with award management, social media campaigns, and comprehensive event coordination for emerging designers.",
+          details: ["Award curation and management", "Social media campaign strategy", "Event coordination for graduate showcase", "Emerging designer relations"],
+          links: [],
+        },
+        "Xavier Brisoux at London Craft Week": {
+          images: [
+            "./src/LCW/LCW24 img1.jpeg",
+            "./src/LCW/LCW24 img2.jpeg",
+            "./src/LCW/LCW24 img4.jpeg",
+            "./src/LCW/LCW24 img5.jpeg",
+          ],
+          description: "Artisan showcase during London Craft Week — project management, social media campaigns, and team coordination for a bespoke craft installation.",
+          details: ["Artisan liaison and installation management", "Social media campaign planning and execution", "Team coordination across event duration", "Press and audience engagement"],
+          links: [],
+        },
+        "Accessories of Activism (Shelter)": {
+          images: [
+            "./src/Accessories of Activism/AccessoriesOfActivism img1.jpeg",
+            "./src/Accessories of Activism/AccessoriesOfActivism img2.jpeg",
+          ],
+          description: "Coordinated a high-profile charity collaboration between YKK London Showroom and Shelter Boutique, bringing artist Jo Cope's internationally exhibited \"Accessories of Activism\" project to the YKK showroom window during London Fashion Week.",
+          details: [
+            "Managed end-to-end project planning and execution including transport and logistics for delicate original artwork",
+            "Designed, sourced, and coordinated the production of display boards for the exhibition",
+            "Delivered a full multi-channel promotional campaign across social media, email, and press",
+            "Organised and managed a launch event including catering, drinks, and security",
+            "Wrote and distributed a press release that secured coverage in FashionUnited and wider industry press",
+            "Timed the launch to coincide with London Fashion Week to maximise exposure and awareness for Shelter's homelessness campaign",
+          ],
+          links: [],
+        },
+        "Recall by Kristina Walsh": {
+          images: [
+            "./src/Recall/Recall img1.jpeg",
+            "./src/Recall/Recall img2.jpeg",
+            "./src/Recall/Recall img3.jpeg",
+          ],
+          description: "Art exhibition event management with social media campaigns and multi-platform promotional strategy for an emerging fashion artist.",
+          details: ["Exhibition logistics and management", "Social media campaign strategy", "Multi-platform promotional content", "Artist relations and liaison"],
+          links: [],
+        },
+        "Student Workshop Week Mar 2024": {
+          images: [
+            "./src/Deadstock24Mar/Deadstock24Mar img1.jpg",
+            "./src/Deadstock24Mar/Deadstock24Mar img2.jpg",
+            "./src/Deadstock24Mar/Deadstock24Mar img3.jpg",
+            "./src/Deadstock24Mar/Deadstock24Mar img4.jpg",
+            "./src/Deadstock24Mar/Deadstock24Mar img5.jpeg",
+          ],
+          description: "Educational workshop series on generative AI and prompt engineering — student engagement strategy and curriculum coordination for fashion students.",
+          details: ["Generative AI workshop curriculum", "Prompt engineering sessions", "Student engagement strategy", "Fashion school coordination"],
+          links: [],
+        },
+        "Dictionary App": {
+          images: ["./src/projectImages/dictionary project.png"],
+          description: "Interactive dictionary app built with React — search a word to get definitions and images simultaneously. Fully responsive and built as a deep-dive into React fundamentals.",
+          details: [
+            "Built with React and component-based architecture",
+            "Integrated dictionary and image APIs",
+            "Fully responsive across all device sizes",
+            "Deployed on Netlify",
+          ],
+          links: [{ text: "View Live", url: "https://zealous-johnson-734ee0.netlify.app/" }],
+        },
+        "Weather App": {
+          images: ["./src/projectImages/weather project.png"],
+          description: "Responsive weather app showing current conditions and forecasts using live weather APIs with location-based data. Originally built with JavaScript, later converted to React.",
+          details: [
+            "Location-based weather data via API",
+            "Current conditions and multi-day forecast",
+            "Built in JavaScript, converted to React",
+            "Fully responsive layout",
+          ],
+          links: [{ text: "View Live", url: "https://objective-haibt-b80dac.netlify.app/" }],
+        },
+        "YKK London Showroom 10 Year Anniversary": {
+          images: [
+            "./src/10YearAnniversary/10YearAnniversary 1.jpg",
+            "./src/10YearAnniversary/10YearAnniversary 2.jpg",
+            "./src/10YearAnniversary/10YearAnniversary 3.jpg",
+          ],
+          description: "Multi-faceted anniversary project — historical booklet, competition management, window display design, and VIP promotional campaign celebrating a decade of the YKK London Showroom.",
+          details: [
+            "Historical booklet research and production",
+            "Competition design and management",
+            "Window display concept and coordination",
+            "VIP promotional campaign",
+          ],
+          links: [],
+        },
+        "10 Years of Award Winner": {
+          images: [
+            "./src/10YearsAward/10YearsAward 1.jpg",
+            "./src/10YearsAward/10YearsAward 2.jpg",
+            "./src/10YearsAward/10YearsAward 3.jpg",
+          ],
+          description: "Awards celebration with full team management, budgeting, legal compliance, and coordinated multi-platform promotional campaigns.",
+          details: [
+            "Full team management and coordination",
+            "Budget planning and management",
+            "Legal compliance review",
+            "Multi-platform promotional campaigns",
+          ],
+          links: [],
+        },
+        "Unfixed": {
+          images: [
+            "./src/Unfixed/unfixed1.jpeg",
+            "./src/Unfixed/unfixed3.jpeg",
+          ],
+          description: "Innovation-focused event integrating generative AI tools, team management, and digital marketing strategy for a forward-thinking fashion audience.",
+          details: [
+            "Generative AI tools integration",
+            "Digital marketing strategy",
+            "Team management and coordination",
+            "Fashion-focused audience engagement",
+          ],
+          links: [],
+        },
+        "Graduate Fashion Week 2023 (September)": {
+          images: [],
+          description: "Award management, comprehensive reporting, and multi-platform marketing campaigns for emerging graduate designers at Graduate Fashion Week September 2023.",
+          details: [
+            "YKK award curation and management",
+            "Comprehensive event reporting",
+            "Multi-platform marketing campaigns",
+            "Graduate designer relations",
+          ],
+          links: [],
+        },
+        "Graduate Fashion Week 2023 (April)": {
+          images: [
+            "./src/GFW23Apr/GFW23SEP1.jpeg",
+            "./src/GFW23Apr/GFW23SEP2.jpeg",
+            "./src/GFW23Apr/GFW23SEP3.jpeg",
+          ],
+          description: "Spring graduate fashion showcase with full event coordination, social media strategy, and YKK award management.",
+          details: [
+            "Full event coordination",
+            "Social media strategy and content",
+            "YKK award management",
+            "Graduate designer engagement",
+          ],
+          links: [],
+        },
+        "Dead Stock Week Nov 2023": {
+          images: [
+            "./src/Deadstock23Nov/Deadstock23Nov img1.jpg",
+            "./src/Deadstock23Nov/Deadstock23Nov img2.jpg",
+            "./src/Deadstock23Nov/Deadstock23Nov img3.jpg",
+            "./src/Deadstock23Nov/Deadstock23Nov img4.jpg",
+          ],
+          description: "AI-powered sustainable fashion week — content campaigns, presenting, and full event management coordination.",
+          details: [
+            "AI-powered content campaigns",
+            "Live presenting and hosting",
+            "Full event management",
+            "Sustainable fashion promotion",
+          ],
+          links: [],
+        },
+        "Dead Stock Day May 2023": {
+          images: [
+            "./src/Deadstock23May/Deadstock23May 1.jpg",
+            "./src/Deadstock23May/Deadstock23May 2.jpg",
+            "./src/Deadstock23May/Deadstock23May 3.jpg",
+          ],
+          description: "Single-day sustainable fashion event with AI integration, legal compliance review, and multi-channel promotional campaigns.",
+          details: [
+            "AI integration for content",
+            "Legal compliance review",
+            "Multi-channel promotional campaigns",
+            "Event logistics management",
+          ],
+          links: [],
+        },
+        "Portfolio Website": {
+          images: ["./src/projectImages/portfolioproject.png"],
+          description: "Designed and built this portfolio from scratch using HTML, CSS, Bootstrap, and JavaScript — including responsive design, filter logic, and modal interactions.",
+          details: [
+            "Multi-page responsive site built with HTML, CSS & Bootstrap",
+            "JavaScript filter logic and modal interactions",
+            "Deployed and maintained on custom domain",
+            "Continuously updated with new projects and certificates",
+          ],
+          links: [{ text: "View Live", url: "https://www.elbaker.com" }],
+        },
+        "Salesforce CRM Implementation and Optimisation": {
+          images: [],
+          description: "Supported the build and ongoing optimisation of Salesforce CRM for the Business Strategy Group at YKK Europe, acting as the internal subject matter expert for system performance, data quality, and user adoption across the commercial team. Also led a cross departmental project to consolidate fragmented email marketing operations across multiple European entities into a single unified system, and implemented a client meeting capture solution to replace manual tracking with automated data collection feeding directly into Salesforce.",
+          details: [
+            "Redesigned tracking structures and workflows, reducing lead response time by over 50%",
+            "Built custom dashboards and reporting infrastructure for senior commercial stakeholders",
+            "Implemented GDPR compliant data governance and capture protocols across multiple European entities, navigating different regional compliance requirements",
+            "Delivered user training and ongoing support to drive consistent platform adoption",
+            "Integrated Salesforce with Mailchimp to enable cross platform data flow",
+            "Audited and cleaned contact data across multiple departments, resolving missing fields, duplicates, and inconsistencies",
+            "Designed a unified email template adopted across all departments ensuring consistent branding",
+            "Connected email marketing data directly to Salesforce enabling accurate subscriber to account linking",
+            "Delivered clean cross departmental analytics for the first time giving leadership a single view of email engagement",
+            "Researched and implemented Calendly enabling clients to book directly from a link, removing manual back and forth for the sales team",
+            "Built a walk in client form to capture unplanned visits that had previously gone unrecorded",
+            "Connected both meeting data sources into Salesforce creating a complete and accurate picture of all client meetings",
+            "Delivered reliable sales reporting for the first time based on real data rather than manual estimates",
+          ],
+          links: [],
+        },
+        "Office IT Infrastructure Improvement Programme": {
+          images: [],
+          description: "Led business analysis for a company-wide IT improvement initiative, working with KDDI Europe to gather requirements, evaluate solutions, and deliver recommendations across infrastructure, hardware, and data management systems.",
+          details: [
+            "Gathered and documented requirements across wifi, server, storage, and hardware needs",
+            "Evaluated and recommended solutions from KDDI Europe, an ICT solutions provider",
+            "Produced structured analysis and recommendations for senior management",
+            "Coordinated improvements to office security, printer and monitor replacement, and server relocation",
+            "Researched new systems to improve office operations and customer experience",
+          ],
+          links: [],
+        },
+        "Client Acquisition Event — 838% Growth": {
+          images: [],
+          description: "Designed and delivered a branded client acquisition event that grew from a small industry gathering into a major commercial showcase, generating significant new business pipeline and qualified sales conversations.",
+          details: [
+            "Scaled event attendance from 60 to 563 attendees in a single year",
+            "Generated 90% new prospects from attendees",
+            "Produced 70+ qualified follow up sales conversations",
+            "Managed all operational and logistics infrastructure end to end",
+            "Executed multi-channel promotion across paid social, email, print, and press",
+          ],
+          links: [],
+        },
+        "Digital Range Board Automation": {
+          images: [],
+          description: "Designed and built an automated digital range board in Excel that replaced manual physical boards during remote working, pulling live product data from the range plan and images from both the website and internal folders for unreleased products.",
+          details: [
+            "Replaced manual physical range boards with a fully automated digital solution",
+            "Pulled live product data directly from the range plan",
+            "Integrated website images for historic products and internal folder images for unreleased products",
+            "Improved planning visibility and data accuracy across the buying team",
+            "Adopted across the team as the primary planning and merchandising tool",
+          ],
+          links: [],
+        },
+        "Product Data Management and Cataloguing": {
+          images: [],
+          description: "Managed structured product metadata in VisionPLM, maintaining accurate garment data that fed directly into warehouse management systems and the ecommerce website, ensuring data quality and consistency across the full product lifecycle.",
+          details: [
+            "Maintained garment attribute data across multiple womenswear categories",
+            "Ensured data accuracy feeding directly into warehouse management and ecommerce systems",
+            "Supported consistent product information across all downstream platforms",
+            "Contributed to Reiss's record sales growth of 50% in FY2021 and 26.9% in FY2022",
+            "Managed data across casual jackets, trousers, outerwear, leathers, denim, and formal categories",
+          ],
+          links: [],
+        },
+        "Salesforce Lead Routing & Automation System": {
+          images: [],
+          description: "A comprehensive Salesforce administration project designed to overhaul a broken lead management process for a fast growing AI company. The solution automated lead routing, follow up task creation, and stall detection across multiple global regions, replacing a manual and error prone system with a scalable automated workflow.",
+          details: [
+            "Built a record-triggered flow routing leads to regional queues across EMEA, Americas, and APAC based on country data",
+            "Designed a queue based assignment structure ensuring continuity when team members change",
+            "Automated follow up task creation for every new lead with priority and due date set automatically",
+            "Created a custom Needs Review field to flag unrouted and stalled leads for management review",
+            "Built a scheduled stall detection flow running daily to identify leads with no activity for 7 days",
+            "Implemented dynamic queue fetching using Get Records to eliminate hardcoded values and improve maintainability",
+            "Designed role hierarchy and user structure reflecting the company's real global team structure",
+            "Prepared duplicate management strategy using Salesforce native Matching Rules and Duplicate Rules, with third party tooling recommended for bulk deduplication",
+          ],
+          links: [],
+        },
+      };
+
+      // ── MODAL LOGIC ───────────────────────────────────
+      document.querySelectorAll(".project-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const title =
+            card.getAttribute("data-title") ||
+            card.querySelector(".card-title").textContent.trim();
+          const project = projectData[title];
+          openModal(title, project || buildDefaultProject(title, card));
+        });
+      });
+
+      function buildDefaultProject(title, card) {
+        const chips = Array.from(card.querySelectorAll(".chip")).map(
+          (c) => c.textContent,
+        );
+        const desc = card.querySelector(".card-desc")
+          ? card.querySelector(".card-desc").textContent
+          : "";
+        return {
+          images: [],
+          description: desc,
+          details: chips.length
+            ? chips.map((c) => c + " — add detail here")
+            : ["Add your key achievements and outcomes for this project."],
+          links: [],
+        };
+      }
+
+      function openModal(title, project) {
+        const hasImages = project.images && project.images.length > 0;
+
+        const carouselHTML = hasImages
+          ? `
+          <div id="projectCarousel" class="carousel slide eb-modal-carousel" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              ${project.images.map((_, i) => `<button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="${i}" ${i === 0 ? 'class="active"' : ""}></button>`).join("")}
+            </div>
+            <div class="carousel-inner">
+              ${project.images
+                .map(
+                  (src, i) => `
+                <div class="carousel-item ${i === 0 ? "active" : ""}" data-bs-interval="4000">
+                  <img src="${src}" class="d-block" alt="Project image ${i + 1}" onerror="this.style.display='none'">
+                </div>`,
+                )
+                .join("")}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+          </div>`
+          : "";
+
+        const linksHTML =
+          project.links && project.links.length
+            ? `<span class="modal-section-label">Links</span>
+             <div class="modal-links">
+               ${project.links.map((l) => `<a href="${l.url}" target="_blank" rel="noopener noreferrer" class="modal-link-btn">${l.text} ↗</a>`).join("")}
+             </div>`
+            : "";
+
+        const overlay = document.createElement("div");
+        overlay.className = "eb-modal-overlay";
+        overlay.innerHTML = `
+          <div class="eb-modal" role="dialog" aria-modal="true" aria-label="${title}">
+            <div class="eb-modal-header">
+              <h2 class="eb-modal-title">${title}</h2>
+              <button class="eb-modal-close" aria-label="Close">✕</button>
+            </div>
+            ${carouselHTML}
+            <div class="eb-modal-body">
+              <span class="modal-section-label">Overview</span>
+              <p class="modal-desc">${project.description}</p>
+              <span class="modal-section-label">Key Achievements</span>
+              <ul class="modal-achievements">
+                ${project.details.map((d) => `<li>${d}</li>`).join("")}
+              </ul>
+              ${linksHTML}
+            </div>
+          </div>`;
+
+        document.body.appendChild(overlay);
+        document.body.style.overflow = "hidden";
+
+        // Init carousel
+        setTimeout(() => {
+          const el = document.getElementById("projectCarousel");
+          if (el)
+            new bootstrap.Carousel(el, { interval: 4000, ride: "carousel" });
+        }, 80);
+
+        // Close handlers
+        overlay
+          .querySelector(".eb-modal-close")
+          .addEventListener("click", closeModal);
+        overlay.addEventListener("click", (e) => {
+          if (e.target === overlay) closeModal();
+        });
+
+        window._currentOverlay = overlay;
+      }
+
+      function closeModal() {
+        if (window._currentOverlay) {
+          window._currentOverlay.remove();
+          window._currentOverlay = null;
+          document.body.style.overflow = "";
+        }
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+    </script>
   </body>
 </html>
