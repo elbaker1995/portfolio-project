@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,41 +6,345 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Eleanor is a Business Analyst based in London. Learn more about her background, coding journey and hobbies."
+      content="Learn about Eleanor Baker — Business Analyst and CRM Manager based in London, with a background in fashion, B2B sales, and strategic business analysis."
     />
-    <title>About Eleanor Baker</title>
+    <meta
+      name="keywords"
+      content="Eleanor Baker, Business Analyst, CRM Manager, Salesforce Administrator, Sales Development, Events Management, London, Portfolio"
+    />
+    <meta name="author" content="Eleanor Baker" />
+    <meta name="robots" content="index, follow" />
+    <title>About — Eleanor Baker</title>
+
+    <!-- Open Graph / LinkedIn sharing -->
+    <meta property="og:title" content="About — Eleanor Baker" />
+    <meta
+      property="og:description"
+      content="Learn about Eleanor Baker — Business Analyst and CRM Manager based in London, with a background in fashion, B2B sales, and strategic business analysis."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.elbaker.com/about.html" />
+    <meta
+      property="og:image"
+      content="https://www.elbaker.com/src/profilePhoto/EleanorBaker.jpg"
+    />
+
+    <link rel="canonical" href="https://www.elbaker.com/about.html" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="./src/favicon/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./src/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./src/favicon/apple-touch-icon.png"
+    />
 
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="portfolio.css".css">
-
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="portfolio.css" />
     <script
       src="https://kit.fontawesome.com/ee7684dcaf.js"
       crossorigin="anonymous"
     ></script>
+
+    <style>
+      /* ── About page ── */
+
+      .about-intro {
+        background-color: var(--cream);
+        padding: 100px 0 72px;
+      }
+
+      .about-photo-wrap {
+        position: relative;
+        max-width: 380px;
+        overflow: hidden;
+      }
+
+      .about-photo {
+        width: 100%;
+        max-height: 430px;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        object-position: bottom;
+        display: block;
+        border: 3px solid var(--accent);
+      }
+
+      /* offset accent block behind photo */
+      .about-photo-wrap::after {
+        content: "";
+        position: absolute;
+        bottom: -14px;
+        right: -14px;
+        width: 80%;
+        height: 80%;
+        border: 2px solid var(--accent);
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .about-photo {
+        position: relative;
+        z-index: 1;
+      }
+
+      .about-bio h1 {
+        font-family: var(--heading-font-family);
+        font-size: 52px;
+        font-weight: 700;
+        color: var(--ink);
+        line-height: 1.1;
+        margin-bottom: 8px;
+      }
+
+      .about-bio .role-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 24px;
+        display: block;
+      }
+
+      .about-bio p {
+        font-size: 16px;
+        line-height: 1.85;
+        color: #4a4b4d;
+        margin-bottom: 18px;
+      }
+
+      .about-links {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 32px;
+      }
+
+      /* ── Timeline ── */
+
+      .timeline-section {
+        background-color: #ffffff;
+        padding: 80px 0;
+      }
+
+      .about-section-heading {
+        font-family: var(--heading-font-family);
+        font-size: 36px;
+        color: var(--ink);
+        margin-bottom: 48px;
+      }
+
+      .timeline {
+        position: relative;
+        padding-left: 36px;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 7px;
+        top: 8px;
+        bottom: 8px;
+        width: 1px;
+        background-color: rgba(28, 29, 31, 0.15);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 44px;
+      }
+
+      .timeline-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: -31px;
+        top: 7px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--accent);
+        border: 2px solid #ffffff;
+        box-shadow: 0 0 0 1.5px var(--accent);
+      }
+
+      .timeline-dot.edu {
+        background-color: var(--accent);
+        box-shadow: 0 0 0 1.5px var(--accent);
+      }
+
+      .timeline-date {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      .timeline-role {
+        font-family: var(--heading-font-family);
+        font-size: 21px;
+        color: var(--ink);
+        margin-bottom: 2px;
+        line-height: 1.3;
+      }
+
+      .timeline-company {
+        font-size: 13px;
+        font-weight: 500;
+        color: #6b6c6e;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      .timeline-desc {
+        font-size: 15px;
+        line-height: 1.75;
+        color: #4a4b4d;
+        margin-bottom: 12px;
+      }
+
+      .timeline-desc ul {
+        padding-left: 18px;
+        margin-bottom: 0;
+      }
+
+      .timeline-desc ul li {
+        margin-bottom: 4px;
+      }
+
+      .timeline-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .timeline-tag {
+        background-color: var(--cream);
+        color: var(--ink);
+        border: 1px solid rgba(28, 29, 31, 0.12);
+        border-radius: 100px;
+        padding: 3px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      /* ── Core Skills ── */
+
+      .skills-about-section {
+        background-color: var(--cream);
+        padding: 80px 0;
+      }
+
+      .skill-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .skill-card {
+        background-color: #ffffff;
+        border: 1px solid rgba(28, 29, 31, 0.08);
+        border-radius: 8px;
+        padding: 28px 24px;
+      }
+
+      .skill-card-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      .skill-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .skill-chip {
+        background-color: var(--cream);
+        color: var(--ink);
+        border: 1px solid rgba(28, 29, 31, 0.12);
+        border-radius: 100px;
+        padding: 5px 14px;
+        font-size: 13px;
+      }
+
+      .skill-chip.highlight {
+        background-color: var(--ink);
+        color: var(--cream);
+        border-color: var(--ink);
+      }
+
+      @media (max-width: 768px) {
+        .about-intro {
+          padding: 96px 0 56px;
+        }
+
+        .about-photo-wrap::after {
+          display: none;
+        }
+
+        .about-photo {
+          max-width: 100%;
+          aspect-ratio: 4 / 3;
+          margin-bottom: 36px;
+        }
+
+        .about-bio h1 {
+          font-size: 38px;
+        }
+
+        .skill-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
-<body>
-      <header class="fixed-top">
-      <nav class="navbar navbar-expand-lg navbar-light py-0">
-        <div class="container-fluid p-0 m-70">
-          <!-- Mobile toggle button -->
+
+  <body>
+    <header class="fixed-top p-0 m-0">
+      <nav class="navbar navbar-expand-lg py-0" aria-label="Main navigation">
+        <div class="container-fluid p-0">
           <button
             class="navbar-toggler ms-3"
             type="button"
@@ -52,22 +356,12 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <!-- Brand for small screens -->
           <a class="navbar-brand d-lg-none" href="./index.html"
             >Eleanor Baker</a
           >
-          <!-- Collapsible nav links -->
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul
-              class="
-                navbar-nav
-                w-100
-                d-flex
-                flex-column flex-lg-row
-                justify-content-around
-                align-items-center
-                text-center
-              "
+              class="navbar-nav w-100 d-flex flex-column flex-lg-row justify-content-around align-items-center text-center"
             >
               <li class="nav-item">
                 <a class="nav-link active" href="./about.html">About</a>
@@ -75,11 +369,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="./certificates.html">Certificates</a>
               </li>
-              <!-- Centered logo for large screens only -->
               <li class="nav-item d-none d-lg-block">
                 <a class="logo" href="./index.html">Eleanor Baker</a>
               </li>
-
               <li class="nav-item">
                 <a class="nav-link" href="./projects.html">Projects</a>
               </li>
@@ -90,133 +382,450 @@
           </div>
         </div>
       </nav>
-
-      <!-- Banner Under Navbar -->
-      <div class="top-banner text-center">
-        Open to opportunities in business analysis, marketing management, and creative strategy.
+      <div class="top-banner">
+        Open to roles in Business Analysis &nbsp;·&nbsp; CRM Management
+        &nbsp;·&nbsp; Salesforce Administration &nbsp;·&nbsp; Sales Development
       </div>
     </header>
-  <div class="pageContainer container-fluid">
-    <div class="headingContent row">
-      <div class="col-lg-6">
-        <h1>Hi, I'm Eleanor</h1>
-        <div class="col d-block d-lg-none smallImagecontainer">
-          <img
-            src="./src/EleanorBakerSmall.jpg"
-            alt="Eleanor Baker Image"
-            class="img-fluid smallImage"
-          />
-        </div>
-        <h2>A Business Analyst based in London.</h2>
-      </div>
-      <div class="col-lg-6 d-none d-lg-block">
-        <img
-          src="./src/EleanorBaker.jpg"
-          alt="Image of Eleanor Baker"
-          class="img-fluid ImageMe"
-        />
-      </div>
-    </div>
-    <br class="d-none d-md-block" />
-    <div class="myBackground">
-      <h3>My Background</h3>
-      <p class="text-muted">
-        I began my career in the fashion industry at nineteen, studying Fashion Design at the London College of Fashion before progressing into Buying. Over time, my career evolved into sales and marketing, and I currently work in the Business Strategy Group at YKK, the world's largest zipper manufacturer. In this role, I support both B2B and B2C clients, manage marketing campaigns, and provide strategic advice to customers.
-        <br/>
-        <br/>
-Over the years, I've worked on a variety of projects and planned events from the ground up, often juggling tight deadlines and coordinating with teams across different departments. These experiences have helped me develop a strong understanding of customer needs, identify trends, and communicate effectively to achieve results. You can take a closer look at some of my work on the Projects page.
-      </p>
-       <br />
-    </div>
-    <div>
-      <h3>My Career Shift</h3>
-      <p class="text-muted">
-During the pandemic, I revisited a long-standing interest in tech and began learning to code through SheCodes. I then discovered a genuine passion for structured thinking and analytical challenges, which led me to business analysis, a field where I can combine my commercial knowledge, curiosity, and technical mindset. I'm currently working toward my BCS International Diploma in Business Analysis and am excited to apply my skills to help organisations improve processes, uncover insights, and drive more intelligent decisions.
-      </p>
-    </div>
-    <br />
-    <h3>See my projects so far</h3>
-<div class="projects row">
-        <div class="col-lg-6 mb-4">
-          <h4 class="my-2">Dictionary App</h4>
-          <a href="https://zealous-johnson-734ee0.netlify.app/" target="_blank" title="Dictionary Project">
-          <img
-            src="./src/dictionary project.png"
-            alt="Dictionary Project Image"
-            class="img-fluid Image"
-        /></a>
-          <p class="text-muted d-flex justify-content-around projectIcons">
-         <i class="fab fa-react" title="React"></i>
-          <i class="fab fa-js-square" title="JavaScript"></i>
-          <i class="fab fa-css3-alt" title="CSS"></i>
-          <i class="fab fa-html5" title="HTML"></i>
-          <i class="fab fa-bootstrap" title="Bootstrap"></i>
-          <i class="fab fa-github-square" title="GitHub"></i>
-        </p>
 
-          <a href="./projects.html" class="btn learnMore" title="Eleanor's Projects">Learn More</a>
-          <a
-            href="https://zealous-johnson-734ee0.netlify.app/"
-            class="btn projectButton"
-            target="_blank"
-            title="Dictionary Project"
-            >Go to Project</a
-          >
+    <main>
+      <!-- ── Intro: photo + bio ── -->
+      <section class="about-intro">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <!-- Photo -->
+            <div class="col-lg-5 col-md-6">
+              <div class="about-photo-wrap">
+                <img
+                  src="./src/profilePhoto/EleanorBaker.jpg"
+                  alt="Eleanor Baker"
+                  class="about-photo img-fluid"
+                />
+              </div>
+            </div>
+
+            <!-- Bio -->
+            <div class="col-lg-7 col-md-6 about-bio">
+              <span class="role-label"
+                >Business Analyst · CRM Manager · Creative Strategist</span
+              >
+              <h1>Hi, I'm Eleanor.</h1>
+              <p>
+                I spent over a decade in fashion and retail, working my way from
+                the shop floor through buying and into B2B sales at YKK, the
+                world's largest zipper manufacturer. Along the way I managed
+                client accounts, ran marketing campaigns, and got properly hands
+                on with Salesforce, building dashboards, tracking pipelines, and
+                using data to actually understand what customers needed. What I
+                loved most was the relationship building, working out what
+                someone actually wants and finding the right way to deliver it.
+              </p>
+              <p>
+                That part, the data, the systems, the problem solving behind the
+                scenes, was always the bit I enjoyed most. So I started studying
+                for my BCS International Diploma in Business Analysis in March,
+                sitting my first exam while still working full time. In July I
+                made the decision to leave fashion behind and commit to it
+                properly, going on to complete my remaining exams and finishing
+                my final one in December. I kept going from there: SQL, Google
+                AI, Salesforce administration. Not because I had to, but because
+                I genuinely wanted to understand how businesses actually work
+                underneath the surface.
+              </p>
+              <p>
+                I'm now looking for a role where that decade of commercial
+                instinct, knowing how to read a customer, build a relationship,
+                and spot what's actually going on, can be paired with the
+                analytical and technical skills I've been building since 2022.
+                If that sounds like the kind of person you're after, I'd love
+                to talk.
+              </p>
+
+              <div class="about-links">
+                <a href="./projects.html" class="btn-ink">View My Work</a>
+                <a href="./contact.html" class="btn-outline-ink"
+                  >Get In Touch</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-6">
-          <h4 class="my-2">Weather Project</h4>
-          <a href="https://objective-haibt-b80dac.netlify.app/" target="_blank" title="Weather App">
-          <img
-            src="./src/weather project.png"
-            alt="Weather Project Image"
-            class="img-fluid Image"
-        /></a>
-          <p class="text-muted d-flex justify-content-around projectIcons">
-          <i class="fab fa-react" title="React"></i>
-          <i class="fab fa-js-square" title="JavaScript"></i>
-          <i class="fab fa-css3-alt" title="CSS"></i>
-          <i class="fab fa-html5" title="HTML"></i>
-          <i class="fab fa-bootstrap" title="Bootstrap"></i>
-          <i class="fab fa-github-square" title="GitHub"></i>
-        </p>
-          <a href="./projects.html" class="btn learnMore" title="Eleanor's Projects">Learn More</a>
-          <a
-            href="https://objective-haibt-b80dac.netlify.app/"
-            class="btn projectButton"
-            target="_blank"
-            title="Weather App"
-            >Go to Project</a
-          >
+      </section>
+
+      <!-- Work Experience Timeline -->
+      <section class="timeline-section">
+        <div class="container">
+          <h2 class="about-section-heading">Experience</h2>
+
+          <div class="timeline">
+            <!-- Independent Study -->
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <span class="timeline-date">2025 — Present</span>
+              <h3 class="timeline-role">
+                Independent Study and Professional Development
+              </h3>
+              <span class="timeline-company">Self-directed · London, UK</span>
+              <div class="timeline-desc">
+                Following the completion of my BCS Diploma, dedicated full time
+                to building technical skills that complement my commercial and
+                analytical background.
+                <ul style="margin-top: 10px">
+                  <li>
+                    Salesforce Administrator Certification (in progress) and
+                    Agentblazer Champion (AI and Agentforce)
+                  </li>
+                  <li>
+                    SQL for Data Science — University of California, Davis
+                  </li>
+                  <li>Tableau Desktop, Prep, Server and Cloud</li>
+                  <li>Google AI Essentials Certificate</li>
+                  <li>Self-directed Python projects</li>
+                </ul>
+              </div>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Salesforce</span>
+                <span class="timeline-tag">SQL</span>
+                <span class="timeline-tag">Tableau</span>
+                <span class="timeline-tag">Python</span>
+                <span class="timeline-tag">Google AI</span>
+              </div>
+            </div>
+
+            <!-- BCS Diploma -->
+            <div class="timeline-item">
+              <span class="timeline-dot edu"></span>
+              <span class="timeline-date">2025</span>
+              <h3 class="timeline-role">
+                BCS International Diploma in Business Analysis
+              </h3>
+              <span class="timeline-company"
+                >BCS, The Chartered Institute for IT · Completed December
+                2025</span
+              >
+              <div class="timeline-desc">
+                Practitioner-level qualification covering the full BA lifecycle,
+                completed whilst working full time at YKK. Modules passed:
+                <ul style="margin-top: 10px">
+                  <li>Foundation Certificate in Business Analysis</li>
+                  <li>
+                    Practitioner Certificate in Business Analysis Practice
+                  </li>
+                  <li>Practitioner Certificate in Requirements Engineering</li>
+                  <li>
+                    Practitioner Certificate in Modelling Business Processes
+                  </li>
+                </ul>
+              </div>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Business Analysis</span>
+                <span class="timeline-tag">Requirements Engineering</span>
+                <span class="timeline-tag">Process Modelling</span>
+                <span class="timeline-tag">BPMN</span>
+              </div>
+            </div>
+
+            <!-- YKK -->
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <span class="timeline-date">Sept 2022 — Aug 2025</span>
+              <h3 class="timeline-role">
+                Sales, Marketing and Analytics Coordinator
+              </h3>
+              <span class="timeline-company">YKK Europe Ltd · London, UK</span>
+              <div class="timeline-desc">
+                <ul>
+                  <li>
+                    Managed 80+ active B2B accounts contributing approximately
+                    £350k in annual revenue, exceeding a target of 40 new
+                    customer orders per year
+                  </li>
+                  <li>
+                    Generated 15-20 qualified leads per quarter through trade
+                    fairs, networking, and targeted outreach, engaging 200+
+                    prospective clients annually across five national and
+                    international exhibitions
+                  </li>
+                  <li>
+                    Scaled a customer acquisition event from 60 to 563 attendees
+                    (838% growth), generating 90% new prospects and 70+
+                    qualified follow-up sales conversations
+                  </li>
+                  <li>
+                    Reduced lead response time by over 50% through structured
+                    Salesforce tracking and dashboard implementation
+                  </li>
+                  <li>
+                    Designed and executed multi-channel acquisition campaigns
+                    across paid social, email, print, and press
+                  </li>
+                </ul>
+              </div>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Salesforce</span>
+                <span class="timeline-tag">B2B Sales</span>
+                <span class="timeline-tag">CRM</span>
+                <span class="timeline-tag">Campaign Strategy</span>
+                <span class="timeline-tag">Event Management</span>
+                <span class="timeline-tag">Stakeholder Management</span>
+                <span class="timeline-tag">Reporting</span>
+              </div>
+            </div>
+            <!-- SheCodes -->
+            <div class="timeline-item">
+              <span class="timeline-dot edu"></span>
+              <span class="timeline-date">2021 — 2025</span>
+              <h3 class="timeline-role">Web Development Certificate</h3>
+              <span class="timeline-company">SheCodes · Online</span>
+              <div class="timeline-desc">
+                Completed the full SheCodes development pathway covering HTML,
+                CSS, JavaScript, React, responsive design, and AI integration.
+                Built real-world projects throughout, including a React
+                Dictionary App integrating multiple APIs, a React Weather App
+                converted from vanilla JS, and this portfolio site.
+              </div>
+              <div class="timeline-tags">
+                <span class="timeline-tag">HTML and CSS</span>
+                <span class="timeline-tag">JavaScript</span>
+                <span class="timeline-tag">React</span>
+                <span class="timeline-tag">Responsive Design</span>
+              </div>
+            </div>
+            <!-- Reiss Buyer -->
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <span class="timeline-date">Nov 2019 — Aug 2022</span>
+              <h3 class="timeline-role">Assistant Buyer</h3>
+              <span class="timeline-company">Reiss · London, UK</span>
+              <div class="timeline-desc">
+                <ul>
+                  <li>
+                    Drove category performance across womenswear during Reiss's
+                    post-pandemic recovery, contributing to 50% group sales
+                    growth in FY2021 and a further 26.9% in FY2022
+                  </li>
+                  <li>
+                    Analysed sales performance data to identify commercial
+                    opportunities, supporting range planning and assortment
+                    decisions through sales and trend analysis
+                  </li>
+                  <li>
+                    Built an automated digital range board in Excel, pulling
+                    live product data and images to replace physical boards
+                    during remote working and improving planning efficiency
+                    across the buying team
+                  </li>
+                  <li>
+                    Negotiated pricing with suppliers and supported margin
+                    management across multiple seasonal collections
+                  </li>
+                </ul>
+              </div>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Commercial Analysis</span>
+                <span class="timeline-tag">Excel</span>
+                <span class="timeline-tag">Range Planning</span>
+                <span class="timeline-tag">Supplier Negotiation</span>
+                <span class="timeline-tag">Data Analysis</span>
+                <span class="timeline-tag">Process Automation</span>
+              </div>
+            </div>
+
+            <!-- Moss Bros Buyer -->
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <span class="timeline-date">Jan 2018 — Nov 2019</span>
+              <h3 class="timeline-role">Buyer's Admin Assistant</h3>
+              <span class="timeline-company">Moss Bros · London, UK</span>
+              <div class="timeline-desc">
+                <ul>
+                  <li>
+                    Maintained and analysed product, sales, and stock data to
+                    support buying decisions
+                  </li>
+                  <li>
+                    Monitored the product critical path to ensure production
+                    timelines were met across multiple ranges
+                  </li>
+                  <li>
+                    Improved reporting accuracy and efficiency through
+                    structured data management
+                  </li>
+                </ul>
+              </div>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Data Management</span>
+                <span class="timeline-tag">Reporting</span>
+                <span class="timeline-tag">Critical Path</span>
+                <span class="timeline-tag">Supplier Relations</span>
+              </div>
+            </div>
+
+            <!-- Moss Bros Assistant Manager -->
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <span class="timeline-date">Sept 2017 — Nov 2019</span>
+              <h3 class="timeline-role">Assistant Manager</h3>
+              <span class="timeline-company">Moss Bros · London, UK</span>
+              <div class="timeline-desc">
+                <ul>
+                  <li>
+                    Supported day-to-day store operations and led the sales team
+                    to achieve store targets
+                  </li>
+                  <li>
+                    Managed visual merchandising, stock management, and
+                    onboarding of new team members
+                  </li>
+                </ul>
+              </div>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Team Leadership</span>
+                <span class="timeline-tag">Sales</span>
+                <span class="timeline-tag">Customer Relations</span>
+              </div>
+            </div>
+            <!-- Earlier retail -->
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <span class="timeline-date">2013 — 2017</span>
+              <h3 class="timeline-role">Sales Roles</h3>
+              <span class="timeline-company"
+                >Reiss, River Island, Moss Bros · London, UK</span
+              >
+              <div class="timeline-desc">
+                Progressed from sales assistant to assistant manager across
+                multiple premium retail brands, consistently exceeding
+                individual and store sales targets, building strong customer
+                relationships to drive repeat revenue, and supporting visual
+                merchandising and stock management.
+              </div>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Sales</span>
+                <span class="timeline-tag">Customer Service</span>
+                <span class="timeline-tag">Visual Merchandising</span>
+              </div>
+            </div>
+
+            <!-- LCF -->
+            <div class="timeline-item">
+              <span class="timeline-dot edu"></span>
+              <span class="timeline-date">2014 — 2018</span>
+              <h3 class="timeline-role">
+                BA (Hons) Fashion Design and Development
+              </h3>
+              <span class="timeline-company"
+                >London College of Fashion · London, UK</span
+              >
+              <div class="timeline-desc">
+                Foundation studies in fashion design and development, building
+                commercial awareness, creative problem-solving, and an eye for
+                aesthetics that has informed every role since.
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <!-- Core Skills -->
+      <section class="skills-about-section">
+        <div class="container">
+          <h2 class="about-section-heading">Core Skills</h2>
+
+          <div class="skill-grid">
+            <div class="skill-card">
+              <span class="skill-card-label">Analysis and Strategy</span>
+              <div class="skill-chips">
+                <span class="skill-chip highlight">Business Analysis</span>
+                <span class="skill-chip highlight"
+                  >Requirements Engineering</span
+                >
+                <span class="skill-chip">Process Mapping</span>
+                <span class="skill-chip">Gap Analysis</span>
+                <span class="skill-chip">Root Cause Analysis</span>
+                <span class="skill-chip">Stakeholder Management</span>
+                <span class="skill-chip">Business Case Development</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <span class="skill-card-label">CRM and Data</span>
+              <div class="skill-chips">
+                <span class="skill-chip highlight">Salesforce</span>
+                <span class="skill-chip highlight">SQL</span>
+                <span class="skill-chip highlight">Tableau</span>
+                <span class="skill-chip">Google Analytics</span>
+                <span class="skill-chip">Excel and Dashboards</span>
+                <span class="skill-chip">Customer Segmentation</span>
+                <span class="skill-chip">Data Reporting</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <span class="skill-card-label">Marketing and Events</span>
+              <div class="skill-chips">
+                <span class="skill-chip highlight">Event Management</span>
+                <span class="skill-chip highlight">Email Marketing</span>
+                <span class="skill-chip">Campaign Strategy</span>
+                <span class="skill-chip">Paid Social</span>
+                <span class="skill-chip">Mailchimp</span>
+                <span class="skill-chip">B2B and B2C Sales</span>
+                <span class="skill-chip">Trade Shows</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <span class="skill-card-label">Tech and Tools</span>
+              <div class="skill-chips">
+                <span class="skill-chip highlight">HTML and CSS</span>
+                <span class="skill-chip highlight">JavaScript</span>
+                <span class="skill-chip">React</span>
+                <span class="skill-chip">Python</span>
+                <span class="skill-chip">AI Tools</span>
+                <span class="skill-chip">Prompt Engineering</span>
+                <span class="skill-chip">GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="contactMeBox justify-content-between d-none d-lg-flex">
+        <div>
+          <h3>Work Enquiry</h3>
+          <p class="text-muted mb-0">Let's work together</p>
+        </div>
+        <a href="./contact.html" class="btn contactButton" title="Contact page"
+          >Contact Me</a
+        >
       </div>
-    </div>
-  <footer>
-    <div class="contactMeBox justify-content-between d-none d-lg-flex">
-      <div>
-        <h3>Work Enquiry</h3>
-        <p class="text-muted mb-0">Lets work together</p>
+      <p class="text-muted mt-3">
+        Coded and designed by Eleanor Baker
+        <br />
+      </p>
+      <div class="m-2">
+        <a
+          href="mailto:elbaker1995@gmail.com"
+          class="icon m-2"
+          title="Eleanor's Email Address"
+          ><i class="far fa-envelope"></i
+        ></a>
+        <a
+          href="https://github.com/elbaker1995"
+          target="_blank"
+          class="icon m-2"
+          title="Eleanor's GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/eleanorbaker5595/"
+          target="_blank"
+          class="icon m-2"
+          title="Eleanor's LinkedIn"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
       </div>
-      <a href="./contact.html" class="btn contactButton" title="Contact page">Contact Me</a>
-    </div>
-    <p class="text-muted mt-3">
-      Coded and designed by Eleanor Baker
-      <br />
-<div class="m-2">
-      <a href="mailto:elbaker1995@gmail.com" class="icon m-2" title="Eleanor's Email Address"
-        ><i class="far fa-envelope"></i
-      ></a>
-      <a href="https://github.com/elbaker1995" target="blank" class="icon m-2" title="Eleanor's GitHub"
-        ><i class="fab fa-github"></i
-      ></a>
-      <a
-        href="https://www.linkedin.com/in/eleanorbaker5595/"
-        target="blank"
-        class="icon m-2"
-        title="Eleanor's LinkedIn"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
-      </div>
-    </p>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
