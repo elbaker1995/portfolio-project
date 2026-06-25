@@ -338,6 +338,75 @@
           grid-template-columns: 1fr;
         }
       }
+
+      /* ── Beyond Work ── */
+
+      .beyond-work-section {
+        background-color: #ffffff;
+        padding: 80px 0;
+      }
+
+      .beyond-work-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 32px;
+      }
+
+      .beyond-entry p {
+        font-size: 15px;
+        color: #4a4b4d;
+        line-height: 1.7;
+        margin-bottom: 16px;
+      }
+
+      .beyond-carousel {
+        border-radius: 8px;
+        overflow: hidden;
+        height: 280px;
+      }
+
+      .beyond-carousel .carousel-inner,
+      .beyond-carousel .carousel-item {
+        height: 100%;
+      }
+
+      .beyond-carousel-img {
+        height: 280px;
+        object-fit: cover;
+      }
+
+      .beyond-carousel-placeholder {
+        height: 280px;
+        background: linear-gradient(135deg, var(--cream) 0%, #e8e4dd 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        font-size: 13px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .beyond-carousel .carousel-indicators [data-bs-target] {
+        background-color: var(--accent);
+        opacity: 0.6;
+        border-top: none;
+        border-bottom: none;
+        height: 6px;
+        border-radius: 3px;
+      }
+
+      .beyond-carousel .carousel-indicators .active {
+        opacity: 1;
+      }
+
+      @media (max-width: 768px) {
+        .beyond-work-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+      }
     </style>
   </head>
 
@@ -797,6 +866,46 @@
                 <span class="skill-chip">GitHub</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Beyond Work -->
+      <section class="beyond-work-section">
+        <div class="container">
+          <h2 class="about-section-heading">Beyond Work</h2>
+          <div class="beyond-work-grid">
+            <div class="beyond-entry">
+              <p>Completed the UK Three Peaks Challenge, climbing Ben Nevis, Scafell Pike, and Snowdon in 23 hours and 40 minutes, just inside the traditional 24-hour window.</p>
+              <div id="threePeaksCarousel" class="carousel slide beyond-carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#threePeaksCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                  <button type="button" data-bs-target="#threePeaksCarousel" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#threePeaksCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active"><img src="./src/3Peaks/threePeaks img1.jpeg" class="d-block w-100 beyond-carousel-img" alt="Three Peaks Challenge" loading="lazy"></div>
+                  <div class="carousel-item"><img src="./src/3Peaks/threePeaks img2.jpeg" class="d-block w-100 beyond-carousel-img" alt="Three Peaks Challenge" loading="lazy"></div>
+                  <div class="carousel-item"><img src="./src/3Peaks/threePeaks img3.jpeg" class="d-block w-100 beyond-carousel-img" alt="Three Peaks Challenge" loading="lazy"></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#threePeaksCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#threePeaksCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+              </div>
+            </div>
+            <div class="beyond-entry">
+              <p>Travelled to 31 countries and counting, much of it solo, a curiosity for new places and cultures that shapes how I approach people and problems alike.</p>
+              <div id="travelsCarousel" class="carousel slide beyond-carousel" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active beyond-carousel-placeholder"><span>Photos coming soon</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">Resilience</span>
+            <span class="skill-chip">Determination</span>
+            <span class="skill-chip">Cultural Curiosity</span>
+            <span class="skill-chip">Adaptability</span>
           </div>
         </div>
       </section>
