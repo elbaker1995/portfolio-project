@@ -704,11 +704,12 @@
             data-category="crm"
             data-title="Calendly Implementation"
           >
-            <div
-              class="card-thumb"
-              style="background: linear-gradient(135deg, #1c7ed6 0%, #292b2d 100%);"
-            >
-              <i class="fas fa-calendar-check card-thumb-emoji" style="color:#f6f4f1;"></i>
+            <div class="card-thumb">
+              <img loading="lazy"
+                src="./src/Calendly/calendly_1.png"
+                alt="Calendly Implementation"
+                onerror="this.parentElement.innerHTML='<i class=\'fas fa-calendar-check card-thumb-emoji\' style=\'color:#f6f4f1;\'></i>'"
+              />
             </div>
             <div class="card-body-inner">
               <span class="cat-badge">CRM · Project Management</span>
@@ -1681,7 +1682,11 @@
           links: [],
         },
         "Calendly Implementation": {
-          images: [],
+          images: [
+            "./src/Calendly/calendly_1.png",
+            "./src/Calendly/calendly_2.png",
+            "./src/Calendly/calendly_3.png",
+          ],
           description: "Managed the Calendly project end to end at YKK Europe, from researching and selecting the tool through to full implementation. Integrated it directly with Salesforce so client information was captured automatically, while giving the team an easy way to share their availability with customers.",
           details: [
             "Researched and selected Calendly as the right scheduling tool for the team's needs",
