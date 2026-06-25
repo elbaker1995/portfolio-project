@@ -499,6 +499,71 @@
         }
       }
 
+      /* ── FOOTER ─────────────────────────────────── */
+      footer {
+        padding: 10px;
+        margin: 20px;
+        text-align: center;
+      }
+      footer a {
+        color: var(--ink);
+        text-decoration: none;
+      }
+      footer .contactMeBox {
+        background-color: var(--cream);
+        margin: 0 100px;
+        padding: 30px 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 4px;
+      }
+      footer .contactMeBox h3 {
+        font-family: var(--heading-font);
+        font-size: 1rem;
+        color: var(--ink);
+        margin-bottom: 4px;
+      }
+      footer .icon {
+        background-color: var(--cream);
+        border-radius: 50%;
+        margin: 20px;
+        padding: 10px 14px;
+        font-size: 24px;
+        line-height: 45px;
+      }
+      .contactButton {
+        background: var(--ink);
+        border: 1px solid var(--ink);
+        border-radius: 4px;
+        color: var(--cream);
+        font-size: 14px;
+        font-family: var(--body-font);
+        padding: 14px 28px;
+        text-decoration: none;
+        transition: var(--transition);
+      }
+      .contactButton:hover {
+        background: #2e2f31;
+        color: var(--cream);
+      }
+      @media (max-width: 768px) {
+        footer .contactMeBox {
+          flex-direction: column;
+          align-items: center;
+          gap: 16px;
+          padding: 24px 20px;
+          text-align: center;
+          margin: 0 auto;
+        }
+        footer .icon {
+          margin: 5px;
+          padding: 8px 11px;
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+
       /* ── RESPONSIVE ─────────────────────────────── */
       @media (max-width: 576px) {
         .eb-modal-header {
@@ -1880,5 +1945,23 @@
         if (e.key === "Escape") closeModal();
       });
     </script>
+
+    <footer>
+      <div class="contactMeBox d-flex">
+        <div>
+          <h3>Work Enquiry</h3>
+          <p class="text-muted mb-0">Let's work together</p>
+        </div>
+        <a href="./contact.html" class="contactButton" title="Contact page">Contact Me</a>
+      </div>
+      <p class="text-muted mt-3">
+        Coded and designed by Eleanor Baker<br />
+      </p>
+      <div class="m-2">
+        <a href="mailto:elbaker1995@gmail.com" class="icon m-2" title="Eleanor's Email Address"><i class="far fa-envelope"></i></a>
+        <a href="https://github.com/elbaker1995" target="_blank" class="icon m-2" title="Eleanor's GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/eleanorbaker5595/" target="_blank" class="icon m-2" title="Eleanor's LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </footer>
   </body>
 </html>
