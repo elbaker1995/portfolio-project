@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,41 +6,296 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Eleanor is a Business Analyst based in London contact her to work with her on new project or to discuss job opportunities."
+      content="Get in touch with Eleanor Baker — Business Analyst and CRM specialist based in London. Open to job opportunities and collaborations."
     />
-    <title>Contact Eleanor Baker</title>
+    <meta
+      name="keywords"
+      content="Eleanor Baker, Business Analyst, CRM Manager, Salesforce Administrator, Sales Development, Events Management, London, Portfolio"
+    />
+    <meta name="author" content="Eleanor Baker" />
+    <meta name="robots" content="index, follow" />
+    <title>Contact — Eleanor Baker</title>
+
+    <!-- Open Graph / LinkedIn sharing -->
+    <meta property="og:title" content="Contact — Eleanor Baker" />
+    <meta
+      property="og:description"
+      content="Get in touch with Eleanor Baker — Business Analyst and CRM specialist based in London. Open to job opportunities and collaborations."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.elbaker.com/contact.html" />
+    <meta
+      property="og:image"
+      content="https://www.elbaker.com/src/profilePhoto/EleanorBaker.jpg"
+    />
+
+    <link rel="canonical" href="https://www.elbaker.com/contact.html" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="./src/favicon/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./src/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./src/favicon/apple-touch-icon.png"
+    />
 
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="portfolio.css" />
-
     <script
       src="https://kit.fontawesome.com/ee7684dcaf.js"
       crossorigin="anonymous"
     ></script>
+
+    <style>
+      /* ── Contact page ── */
+
+      .contact-page {
+        background-color: var(--cream);
+        min-height: calc(100vh - 86px);
+        padding: 100px 0 80px;
+      }
+
+      .contact-heading {
+        font-family: var(--heading-font-family);
+        font-size: 52px;
+        font-weight: 700;
+        color: var(--ink);
+        line-height: 1.1;
+        margin-bottom: 12px;
+      }
+
+      .contact-tagline {
+        font-size: 15px;
+        color: #4a4b4d;
+        margin-bottom: 56px;
+      }
+
+      .contact-tagline em {
+        font-style: normal;
+        color: var(--accent);
+        font-weight: 500;
+      }
+
+      /* ── Info column ── */
+
+      .contact-info-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 20px;
+        display: block;
+      }
+
+      .contact-link-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 20px;
+        text-decoration: none;
+        color: var(--ink);
+        transition: color 0.2s;
+      }
+
+      .contact-link-item:hover {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .contact-link-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        border: 1px solid rgba(28, 29, 31, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        flex-shrink: 0;
+        transition:
+          background 0.2s,
+          border-color 0.2s;
+      }
+
+      .contact-link-item:hover .contact-link-icon {
+        background-color: var(--ink);
+        border-color: var(--ink);
+        color: var(--cream);
+      }
+
+      .contact-link-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-link-name {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #6b6c6e;
+        margin-bottom: 1px;
+      }
+
+      .contact-link-value {
+        font-size: 15px;
+        color: var(--ink);
+      }
+
+      .contact-divider {
+        border: none;
+        border-top: 1px solid rgba(28, 29, 31, 0.1);
+        margin: 32px 0;
+      }
+
+      .availability-note {
+        font-size: 14px;
+        line-height: 1.7;
+        color: #4a4b4d;
+        background-color: #ffffff;
+        border-left: 3px solid var(--accent);
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+      }
+
+      /* ── Form ── */
+
+      .contact-form-wrap {
+        background-color: #ffffff;
+        border: 1px solid rgba(28, 29, 31, 0.08);
+        border-radius: 8px;
+        padding: 40px;
+      }
+
+      .form-label {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink);
+        margin-bottom: 6px;
+      }
+
+      .form-control,
+      .form-select {
+        background-color: var(--cream);
+        border: 1px solid rgba(28, 29, 31, 0.18);
+        border-radius: 4px;
+        color: var(--ink);
+        font-family: var(--default-font-family);
+        font-size: 15px;
+        padding: 12px 14px;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        background-color: #ffffff;
+        border-color: var(--ink);
+        box-shadow: 0 0 0 3px rgba(28, 29, 31, 0.08);
+        color: var(--ink);
+        outline: none;
+      }
+
+      .form-control::placeholder {
+        color: #9a9b9d;
+      }
+
+      textarea.form-control {
+        resize: vertical;
+        min-height: 140px;
+      }
+
+      .form-submit-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 8px;
+      }
+
+      .form-note {
+        font-size: 13px;
+        color: #9a9b9d;
+      }
+
+      /* Success / error states */
+      .form-status {
+        display: none;
+        padding: 14px 18px;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-top: 16px;
+      }
+
+      .form-status.success {
+        background-color: #edf7f2;
+        border: 1px solid #b4deca;
+        color: #2d6a4f;
+      }
+
+      .form-status.error {
+        background-color: #fdf2f2;
+        border: 1px solid #f0b8b8;
+        color: #8b1a1a;
+      }
+
+      @media (max-width: 768px) {
+        .contact-heading {
+          font-size: 38px;
+        }
+
+        .contact-form-wrap {
+          padding: 28px 20px;
+        }
+
+        .form-submit-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <header class="fixed-top">
-      <nav class="navbar navbar-expand-lg navbar-light py-0">
-        <div class="container-fluid p-0 m-70">
-          <!-- Mobile toggle button -->
+    <header class="fixed-top p-0 m-0">
+      <nav class="navbar navbar-expand-lg py-0" aria-label="Main navigation">
+        <div class="container-fluid p-0">
           <button
             class="navbar-toggler ms-3"
             type="button"
@@ -52,22 +307,12 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <!-- Brand for small screens -->
           <a class="navbar-brand d-lg-none" href="./index.html"
             >Eleanor Baker</a
           >
-          <!-- Collapsible nav links -->
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul
-              class="
-                navbar-nav
-                w-100
-                d-flex
-                flex-column flex-lg-row
-                justify-content-around
-                align-items-center
-                text-center
-              "
+              class="navbar-nav w-100 d-flex flex-column flex-lg-row justify-content-around align-items-center text-center"
             >
               <li class="nav-item">
                 <a class="nav-link" href="./about.html">About</a>
@@ -75,11 +320,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="./certificates.html">Certificates</a>
               </li>
-              <!-- Centered logo for large screens only -->
               <li class="nav-item d-none d-lg-block">
                 <a class="logo" href="./index.html">Eleanor Baker</a>
               </li>
-
               <li class="nav-item">
                 <a class="nav-link" href="./projects.html">Projects</a>
               </li>
@@ -90,57 +333,217 @@
           </div>
         </div>
       </nav>
-
-      <!-- Banner Under Navbar -->
-      <div class="top-banner text-center">
-        Open to opportunities in business analysis, marketing management, and
-        creative strategy.
+      <div class="top-banner">
+        Open to roles in Business Analysis &nbsp;·&nbsp; CRM Management
+        &nbsp;·&nbsp; Salesforce Administration &nbsp;·&nbsp; Sales Development
       </div>
     </header>
 
-    <div class="pageContainer container-fluid p-0">
-      <div class="headingContainer">
-        <h1>Lets get in touch</h1>
-        <h2>
-          Whether you'd like to collaborate, discuss a project, or say hello,
-          I'd love to hear from you.
-        </h2>
+    <main class="contact-page">
+      <div class="container">
+        <!-- Page heading -->
+        <h1 class="contact-heading">Let's talk.</h1>
+        <p class="contact-tagline">
+          <em>Open to new opportunities</em> — feel free to reach out about
+          roles, collaborations, or just to say hello.
+        </p>
+
+        <div class="row g-5 align-items-start">
+          <!-- Left: contact info -->
+          <div class="col-lg-4">
+            <span class="contact-info-label">Find me here</span>
+
+            <a
+              href="mailto:elbaker1995@gmail.com"
+              class="contact-link-item"
+              title="Email Eleanor"
+            >
+              <span class="contact-link-icon">
+                <i class="far fa-envelope"></i>
+              </span>
+              <span class="contact-link-text">
+                <span class="contact-link-name">Email</span>
+                <span class="contact-link-value">elbaker1995@gmail.com</span>
+              </span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/eleanorbaker5595/"
+              target="_blank"
+              rel="noopener"
+              class="contact-link-item"
+              title="Eleanor on LinkedIn"
+            >
+              <span class="contact-link-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </span>
+              <span class="contact-link-text">
+                <span class="contact-link-name">LinkedIn</span>
+                <span class="contact-link-value">eleanorbaker5595</span>
+              </span>
+            </a>
+
+            <a
+              href="https://github.com/elbaker1995"
+              target="_blank"
+              rel="noopener"
+              class="contact-link-item"
+              title="Eleanor on GitHub"
+            >
+              <span class="contact-link-icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span class="contact-link-text">
+                <span class="contact-link-name">GitHub</span>
+                <span class="contact-link-value">@elbaker1995</span>
+              </span>
+            </a>
+
+            <hr class="contact-divider" />
+
+            <p class="availability-note">
+              Based in London. Available for contract, freelance, and permanent
+              roles in Business Analysis, CRM, and Sales Development.
+            </p>
+          </div>
+
+          <!-- Right: contact form -->
+          <div class="col-lg-8">
+            <div class="contact-form-wrap">
+              <form
+                id="contact-form"
+                action="https://formspree.io/f/mjgaaegn"
+                method="POST"
+                novalidate
+              >
+                <div class="row g-4">
+                  <div class="col-sm-6">
+                    <label for="name" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="form-control"
+                      placeholder="Your name"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="your@email.com"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-12">
+                    <label for="subject" class="form-label">Subject</label>
+                    <select
+                      id="subject"
+                      name="subject"
+                      class="form-select"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Select a subject…
+                      </option>
+                      <option value="Job Opportunity">Job Opportunity</option>
+                      <option value="Collaboration">Collaboration</option>
+                      <option value="General">General Enquiry</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="form-control"
+                      placeholder="Tell me a bit about what you have in mind…"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <!-- Honeypot — hidden from humans, catches bots -->
+                  <input type="text" name="_gotcha" style="display: none" />
+
+                  <div class="col-12">
+                    <div class="form-submit-row">
+                      <button type="submit" class="btn-ink" id="submit-btn">
+                        Send Message
+                      </button>
+                      <span class="form-note"
+                        >I'll aim to reply within 2 working days.</span
+                      >
+                    </div>
+
+                    <div class="form-status success" id="form-success">
+                      <i class="far fa-check-circle me-2"></i>
+                      Thanks for reaching out — I'll be in touch soon.
+                    </div>
+                    <div class="form-status error" id="form-error">
+                      <i class="far fa-times-circle me-2"></i>
+                      Something went wrong. Please try emailing me directly at
+                      <a href="mailto:elbaker1995@gmail.com"
+                        >elbaker1995@gmail.com</a
+                      >.
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="contact mt-5">
-        <h3>Email</h3>
-        <div class="m-5">
-          <a
-            href="mailto:elbaker1995@gmail.com"
-            target="_blank"
-            title="Eleanor's Email Address"
-            >elbaker1995@gmail.com</a
-          >
-        </div>
-        <h3>LinkedIn</h3>
-        <div class="m-5">
-          <a
-            href="https://www.linkedin.com/in/eleanorbaker5595/"
-            target="blank"
-            title="Eleanor's LinkedIn"
-            >EleanorBaker5595</a
-          >
-        </div>
-        <h3>GitHub</h3>
-        <div class="m-5">
-          <a
-            href="https://github.com/elbaker1995"
-            target="blank"
-            title="Eleanor's GitHub"
-            >@elbaker1995</a
-          >
-        </div>
-      </div>
-    </div>
-    <footer>
-      <p class="text-muted">
-        Coded and designed by Eleanor Baker
-        <br />
-      </p>
-    </footer>
+    </main>
+
+
+    <script>
+      const form = document.getElementById("contact-form");
+      const submitBtn = document.getElementById("submit-btn");
+      const successMsg = document.getElementById("form-success");
+      const errorMsg = document.getElementById("form-error");
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        // Basic client-side validation
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        submitBtn.textContent = "Sending…";
+        submitBtn.disabled = true;
+        successMsg.style.display = "none";
+        errorMsg.style.display = "none";
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" },
+          });
+
+          if (response.ok) {
+            form.reset();
+            successMsg.style.display = "block";
+            submitBtn.textContent = "Send Message";
+            submitBtn.disabled = false;
+          } else {
+            throw new Error("Server error");
+          }
+        } catch {
+          errorMsg.style.display = "block";
+          submitBtn.textContent = "Send Message";
+          submitBtn.disabled = false;
+        }
+      });
+    </script>
   </body>
 </html>

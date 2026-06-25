@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,33 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Eleanor is a Business Analyst based in London. This is Eleanor's portfolio showcasing all of her current projects to date."
+      content="Eleanor Baker is a Business Analyst and CRM specialist based in London with expertise in Salesforce, events management, and creative strategy."
     />
-    <title>Eleanor Baker - Business Analyst</title>
+    <meta
+      name="keywords"
+      content="Eleanor Baker, Business Analyst, CRM Manager, Salesforce Administrator, Sales Development, Events Management, London, Portfolio"
+    />
+    <meta name="author" content="Eleanor Baker" />
+    <meta name="robots" content="index, follow" />
+    <title>Eleanor Baker — Business Analyst &amp; CRM Specialist</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Open Graph / LinkedIn sharing -->
+    <meta
+      property="og:title"
+      content="Eleanor Baker — Business Analyst &amp; CRM Specialist"
+    />
+    <meta
+      property="og:description"
+      content="Eleanor Baker is a Business Analyst and CRM specialist based in London with expertise in Salesforce, events management, and creative strategy."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.elbaker.com/" />
+    <meta
+      property="og:image"
+      content="https://www.elbaker.com/src/profilePhoto/EleanorBaker.jpg"
+    />
 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="canonical" href="https://www.elbaker.com/" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="./src/favicon/favicon.ico" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./src/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./src/favicon/apple-touch-icon.png"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="portfolio.css".css">
+    <link rel="stylesheet" href="portfolio.css" />
 
     <script
       src="https://kit.fontawesome.com/ee7684dcaf.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Eleanor Baker",
+        "jobTitle": "Business Analyst",
+        "url": "https://www.elbaker.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/eleanorbaker5595/",
+          "https://github.com/elbaker1995"
+        ],
+        "knowsAbout": [
+          "Business Analysis",
+          "CRM Management",
+          "Salesforce",
+          "Events Management",
+          "Project Management"
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="fixed-top p-0 m-0">
-      <nav class="navbar navbar-expand-lg navbar-light py-0">
-        <div class="container-fluid p-0 m-70">
-          <!-- Mobile toggle button -->
+      <nav class="navbar navbar-expand-lg py-0" aria-label="Main navigation">
+        <div class="container-fluid p-0">
           <button
             class="navbar-toggler ms-3"
             type="button"
@@ -44,22 +117,12 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <!-- Brand for small screens -->
           <a class="navbar-brand d-lg-none" href="./index.html"
             >Eleanor Baker</a
           >
-          <!-- Collapsible nav links -->
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul
-              class="
-                navbar-nav
-                w-100
-                d-flex
-                flex-column flex-lg-row
-                justify-content-around
-                align-items-center
-                text-center
-              "
+              class="navbar-nav w-100 d-flex flex-column flex-lg-row justify-content-around align-items-center text-center"
             >
               <li class="nav-item">
                 <a class="nav-link" href="./about.html">About</a>
@@ -67,11 +130,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="./certificates.html">Certificates</a>
               </li>
-              <!-- Centered logo for large screens only -->
               <li class="nav-item d-none d-lg-block">
                 <a class="logo" href="./index.html">Eleanor Baker</a>
               </li>
-
               <li class="nav-item">
                 <a class="nav-link" href="./projects.html">Projects</a>
               </li>
@@ -82,48 +143,131 @@
           </div>
         </div>
       </nav>
-
-      <!-- Banner Under Navbar -->
       <div class="top-banner">
-        Open to opportunities in business analysis, marketing management, and creative strategy.
+        Open to roles in Business Analysis &nbsp;·&nbsp; CRM Management
+        &nbsp;·&nbsp; Salesforce Administration &nbsp;·&nbsp; Sales Development
       </div>
     </header>
-    <div class="homepage container-fluid p-0">
-      <div class="hero">
-        <h1>Eleanor Baker</h1>
-        <h2 class="mb-5">Business Analyst based in London</h2>
-        <div>
-          <a href="./projects.html" class="btn btn-branding" title="Eleanor's Projects">See My Projects</a>
+
+    <!-- Hero -->
+    <main>
+      <section class="hero" style="margin-top: 86px">
+        <p class="hero-title">
+          Business Analyst · CRM Specialist · Salesforce Administrator · Sales
+          Development
+        </p>
+        <h1 class="hero-name">Eleanor Baker</h1>
+        <p class="hero-bio">
+          I'm a Business Analyst and CRM specialist based in London, with a
+          decade of commercial experience across retail, buying, and B2B sales.
+          Most recently I spent three years at YKK managing 80+ accounts,
+          building Salesforce dashboards, and scaling a branded acquisition
+          event from 60 to 560 attendees. I'm now actively looking for a role
+          where I can bring together commercial experience, analytical thinking,
+          and genuine technical curiosity from day one.
+        </p>
+        <div class="hero-ctas">
+          <a href="./projects.html" class="btn-ink" title="View My Projects"
+            >View My Projects</a
+          >
+          <a href="./contact.html" class="btn-outline-ink" title="Get In Touch"
+            >Get In Touch</a
+          >
         </div>
-      </div>   
-      <footer>
-    <div class="contactMeBox justify-content-between d-none d-lg-flex">
-      <div>
-        <h3>Work Enquiry</h3>
-        <p class="text-muted mb-0">Lets work together</p>
+      </section>
+
+      <!-- Skills -->
+      <section class="skills-section">
+        <h2>Skills</h2>
+
+        <div class="skills-group">
+          <p class="skills-group-label">Project Management</p>
+          <div class="chips">
+            <span class="chip">Business Analysis</span>
+            <span class="chip">Requirements Engineering</span>
+            <span class="chip">Process Mapping</span>
+            <span class="chip">Stakeholder Management</span>
+            <span class="chip">Agile</span>
+            <span class="chip">Jira</span>
+            <span class="chip">Gap Analysis</span>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <p class="skills-group-label">CRM &amp; Data</p>
+          <div class="chips">
+            <span class="chip">Salesforce</span>
+            <span class="chip">CRM Management</span>
+            <span class="chip">Data Analysis</span>
+            <span class="chip">Reporting &amp; Dashboards</span>
+            <span class="chip">Excel</span>
+            <span class="chip">Zoho CRM</span>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <p class="skills-group-label">Marketing &amp; Sales</p>
+          <div class="chips">
+            <span class="chip">B2B Sales</span>
+            <span class="chip">Sales Development</span>
+            <span class="chip">Email Marketing</span>
+            <span class="chip">Event Management</span>
+            <span class="chip">Campaign Strategy</span>
+            <span class="chip">Mailchimp</span>
+            <span class="chip">Meta Ads</span>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <p class="skills-group-label">AI &amp; Tech</p>
+          <div class="chips">
+            <span class="chip">HTML &amp; CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">React</span>
+            <span class="chip">AI Tools</span>
+            <span class="chip">Prompt Engineering</span>
+            <span class="chip">GitHub</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="contactMeBox justify-content-between d-none d-lg-flex">
+        <div>
+          <h3>Work Enquiry</h3>
+          <p class="text-muted mb-0">Let's work together</p>
+        </div>
+        <a href="./contact.html" class="btn contactButton" title="Contact page"
+          >Contact Me</a
+        >
       </div>
-      <a href="./contact.html" class="btn contactButton" title="Contact page">Contact Me</a>
-    </div>
-    <p class="text-muted mt-3">
-      Coded and designed by Eleanor Baker
-      <br />
-<div class="m-2">
-      <a href="mailto:elbaker1995@gmail.com" class="icon m-2" title="Eleanor's Email Address"
-        ><i class="far fa-envelope"></i
-      ></a>
-      <a href="https://github.com/elbaker1995" target="blank" class="icon m-2" title="Eleanor's GitHub"
-        ><i class="fab fa-github"></i
-      ></a>
-      <a
-        href="https://www.linkedin.com/in/eleanorbaker5595/"
-        target="blank"
-        class="icon m-2"
-        title="Eleanor's LinkedIn"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
+      <p class="text-muted mt-3">
+        Coded and designed by Eleanor Baker
+        <br />
+      </p>
+      <div class="m-2">
+        <a
+          href="mailto:elbaker1995@gmail.com"
+          class="icon m-2"
+          title="Eleanor's Email Address"
+          ><i class="far fa-envelope"></i
+        ></a>
+        <a
+          href="https://github.com/elbaker1995"
+          target="_blank"
+          class="icon m-2"
+          title="Eleanor's GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/eleanorbaker5595/"
+          target="_blank"
+          class="icon m-2"
+          title="Eleanor's LinkedIn"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
       </div>
-    </p>
-  </footer>
-    </div>
+    </footer>
   </body>
 </html>
