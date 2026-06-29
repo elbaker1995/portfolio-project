@@ -475,11 +475,17 @@
             <!-- Photo -->
             <div class="col-lg-5 col-md-6">
               <div class="about-photo-wrap">
-                <img
-                  src="./src/profilePhoto/EleanorBaker.jpg"
-                  alt="Eleanor Baker"
-                  class="about-photo img-fluid"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 768px)"
+                    srcset="./src/profilePhoto/EleanorBakerSmall.png"
+                  />
+                  <img
+                    src="./src/profilePhoto/EleanorBaker.jpg"
+                    alt="Eleanor Baker"
+                    class="about-photo img-fluid"
+                  />
+                </picture>
               </div>
             </div>
 
@@ -1031,6 +1037,11 @@
                     data-bs-target="#threePeaksCarousel"
                     data-bs-slide-to="2"
                   ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#threePeaksCarousel"
+                    data-bs-slide-to="3"
+                  ></button>
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -1051,6 +1062,14 @@
                   <div class="carousel-item">
                     <img
                       src="./src/3Peaks/threePeaks img3.jpeg"
+                      class="d-block w-100 beyond-carousel-img"
+                      alt="Three Peaks Challenge"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./src/3Peaks/threePeaks img4.JPG"
                       class="d-block w-100 beyond-carousel-img"
                       alt="Three Peaks Challenge"
                       loading="lazy"
